@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yellow Lotus Consulting Group</title>
+  <meta name="description" content="Technology and security, built to fit your business. Local AI and IT for small businesses; GRC, cloud, and DevOps for the enterprise." />
+  <meta property="og:title" content="Yellow Lotus Consulting Group" />
+  <meta property="og:description" content="Technology and security, built to fit your business." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --bg:#0c0f0d;            /* near-black, faint green undertone */
+      --bg-2:#11150f;
+      --panel:#141a14;
+      --border:#26301f;
+      --text:#eef1ea;
+      --muted:#9aa597;
+      --gold:#caa24a;          /* muted lotus gold */
+      --gold-soft:#e3c986;
+      --green:#7fae7a;         /* understated accent */
+      --serif:"Fraunces", Georgia, "Times New Roman", serif;
+      --sans:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0; background:var(--bg); color:var(--text); font-family:var(--sans); line-height:1.65; font-size:17px;}
+    a{color:var(--gold-soft); text-decoration:none}
+    a:hover{color:var(--gold); text-decoration:underline; text-underline-offset:3px}
+    .wrap{max-width:940px; margin:0 auto; padding:0 1.5rem}
+    h1,h2,h3{font-family:var(--serif); font-weight:500; letter-spacing:.01em; line-height:1.15}
+
+    /* nav */
+    nav{position:sticky; top:0; z-index:10; backdrop-filter:blur(8px);
+        background:rgba(12,15,13,.78); border-bottom:1px solid var(--border)}
+    .nav-in{display:flex; align-items:center; justify-content:space-between; padding:.85rem 0}
+    .brand{display:flex; align-items:center; gap:.6rem; font-family:var(--serif); font-size:1.05rem; color:var(--text)}
+    .brand:hover{text-decoration:none}
+    .brand svg{flex:none}
+    .nav-links a{color:var(--muted); margin-left:1.4rem; font-size:.92rem}
+    .nav-links a:hover{color:var(--text); text-decoration:none}
+    @media (max-width:620px){ .nav-links{display:none} }
+
+    /* hero */
+    header.hero{padding:6rem 0 4rem}
+    .eyebrow{color:var(--gold); font-size:.8rem; letter-spacing:.16em; text-transform:uppercase; margin:0 0 1.2rem}
+    h1{font-size:clamp(2.4rem,6vw,3.8rem); margin:0 0 1.2rem; max-width:16ch}
+    .hero p{font-size:1.2rem; color:var(--muted); max-width:58ch; margin:0 0 2rem}
+    .cta{display:inline-block; background:var(--gold); color:#1a150a; font-weight:600; padding:.7rem 1.3rem; border-radius:8px; font-size:.95rem}
+    .cta:hover{background:var(--gold-soft); text-decoration:none}
+    .cta.ghost{background:transparent; color:var(--text); border:1px solid var(--border); margin-left:.6rem}
+    .cta.ghost:hover{border-color:var(--gold)}
+
+    section{padding:4rem 0; border-top:1px solid var(--border)}
+    .sec-label{color:var(--gold); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; margin:0 0 .5rem}
+    h2{font-size:clamp(1.7rem,4vw,2.3rem); margin:0 0 1.4rem}
+    .lead{color:var(--muted); max-width:62ch; font-size:1.08rem}
+
+    /* services */
+    .tracks{display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; margin-top:2rem}
+    @media (max-width:720px){ .tracks{grid-template-columns:1fr} }
+    .track{background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:1.6rem}
+    .track h3{font-size:1.35rem; margin:.2rem 0 .3rem}
+    .track .who{color:var(--gold-soft); font-size:.85rem; letter-spacing:.04em; margin:0 0 1rem}
+    .track ul{list-style:none; padding:0; margin:0}
+    .track li{padding:.42rem 0 .42rem 1.4rem; position:relative; color:var(--text); font-size:.97rem}
+    .track li::before{content:""; position:absolute; left:0; top:.95rem; width:7px; height:7px; border-radius:50%; background:var(--green)}
+    .track li span{color:var(--muted)}
+
+    /* work / case studies */
+    .work{display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; margin-top:2rem}
+    @media (max-width:720px){ .work{grid-template-columns:1fr} }
+    .case{display:block; background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:1.5rem; color:var(--text)}
+    .case:hover{border-color:var(--gold); text-decoration:none; transform:translateY(-2px); transition:all .15s ease}
+    .case .kind{color:var(--gold); font-size:.74rem; letter-spacing:.12em; text-transform:uppercase}
+    .case h3{font-size:1.25rem; margin:.4rem 0 .5rem}
+    .case p{color:var(--muted); font-size:.95rem; margin:0 0 1rem}
+    .case .tags{display:flex; flex-wrap:wrap; gap:.35rem}
+    .case .tags span{font-size:.72rem; color:var(--muted); border:1px solid var(--border); border-radius:999px; padding:.15rem .55rem}
+    .case .arrow{color:var(--gold-soft); font-size:.85rem; margin-top:1rem; display:inline-block}
+
+    /* about */
+    .about p{max-width:64ch; color:var(--text)}
+    .about p + p{margin-top:1rem}
+    .about .muted{color:var(--muted)}
+
+    /* contact */
+    .contact{text-align:center; padding:5rem 0}
+    .contact h2{margin-bottom:1rem}
+    .contact p{color:var(--muted); max-width:48ch; margin:0 auto 2rem}
+
+    footer{border-top:1px solid var(--border); padding:2.5rem 0; color:var(--muted); font-size:.85rem; display:flex; justify-content:space-between; flex-wrap:wrap; gap:1rem}
+    footer a{color:var(--muted)}
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="wrap nav-in">
+      <a class="brand" href="#top">
+        <svg width="26" height="26" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path d="M24 42c-9 0-16-5-16-12 3 1 6 1 9-1-4-3-6-8-5-13 4 2 7 5 8 9 1-5 1-10 4-14 3 4 3 9 4 14 1-4 4-7 8-9 1 5-1 10-5 13 3 2 6 2 9 1 0 7-7 12-16 12z" fill="#caa24a" fill-opacity="0.92"/>
+        </svg>
+        Yellow Lotus Consulting Group
+      </a>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <a id="top"></a>
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Yellow Lotus Consulting Group</p>
+      <h1>Technology and security, built to fit your business.</h1>
+      <p>
+        For small businesses, that means practical AI, IT, and software that make
+        you run like a far better funded version of yourself. For larger
+        organizations, it means GRC, cloud, and DevOps work from someone who has
+        carried real audits and real production incidents.
+      </p>
+      <a class="cta" href="#contact">Start a conversation</a>
+      <a class="cta ghost" href="#work">See the work</a>
+    </div>
+  </header>
+
+  <section id="services">
+    <div class="wrap">
+      <p class="sec-label">What we do</p>
+      <h2>Two ways we work</h2>
+      <p class="lead">
+        The same standard applies to both: technology that fits together, stays
+        out of the way, and holds up to scrutiny.
+      </p>
+      <div class="tracks">
+        <div class="track">
+          <h3>For small businesses</h3>
+          <p class="who">Practical tech, priced to be reachable</p>
+          <ul>
+            <li>Local AI and IT infrastructure <span>that solves a specific business problem, without a per-seat SaaS bill</span></li>
+            <li>Servers <span>hosted for you, or built and handed over, your call</span></li>
+            <li>Applications <span>built from scratch or wired into the tools you already run</span></li>
+            <li>Websites <span>designed and shipped, like revampdesign.co and arkhambjj.com</span></li>
+            <li>Security baked in <span>so the foundation is sound from day one</span></li>
+          </ul>
+        </div>
+        <div class="track">
+          <h3>For mid-size and enterprise</h3>
+          <p class="who">Contract work, deep in two disciplines</p>
+          <ul>
+            <li>Governance, Risk, and Compliance <span>SOX, PCI-DSS, FISMA, NIST CSF, CIS, evidence and control automation</span></li>
+            <li>CloudOps and DevOps <span>AWS, Kubernetes, Terraform, Ansible, CI/CD, observability</span></li>
+            <li>Reliability engineering <span>finding the root cause and fixing it, not papering over it</span></li>
+            <li>A foundation in network and software engineering <span>that informs every recommendation</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <p class="sec-label">Selected work</p>
+      <h2>Case studies</h2>
+      <p class="lead">
+        Open-source builds that show how the work is done. Each one is a real
+        problem, the approach, and the result. They run on synthetic data, not
+        client data.
+      </p>
+      <div class="work">
+        <a class="case" href="https://github.com/yellowlotuscg/cloudriskiq">
+          <span class="kind">Security &amp; Compliance</span>
+          <h3>CloudRiskIQ</h3>
+          <p>Pulls security findings from AWS, Azure, endpoints, and GitHub, scores them by real risk, maps each to NIST CSF, CIS, PCI, SOX, and FISMA, and produces an audit-ready evidence pack.</p>
+          <div class="tags"><span>FastAPI</span><span>Next.js</span><span>Python</span><span>Control mapping</span></div>
+          <span class="arrow">View the case study →</span>
+        </a>
+        <a class="case" href="https://github.com/yellowlotuscg/self-healing-k8s-pipeline">
+          <span class="kind">CloudOps &amp; DevOps</span>
+          <h3>Self-healing Kubernetes pipeline</h3>
+          <p>A real EKS incident, a pod-scheduling stampede that cascaded into node failures, reproduced on a local cluster and fixed properly: right-sized requests, tuned probes, disruption budgets, and the alerts that would have caught it.</p>
+          <div class="tags"><span>Kubernetes</span><span>Terraform</span><span>Prometheus</span><span>CI/CD</span></div>
+          <span class="arrow">View the case study →</span>
+        </a>
+        <a class="case" href="https://github.com/yellowlotuscg/leetcode-reasoning">
+          <span class="kind">Problem solving</span>
+          <h3>Algorithms, with the reasoning</h3>
+          <p>Classic algorithm problems worked through in Python, with the thinking written out: how I read the problem, find the invariant, and pick the simplest structure that hits the target complexity.</p>
+          <div class="tags"><span>Python</span><span>Data structures</span><span>Complexity</span></div>
+          <span class="arrow">View the case study →</span>
+        </a>
+        <a class="case" href="https://revampdesign.co">
+          <span class="kind">Web</span>
+          <h3>Websites we have shipped</h3>
+          <p>Sites built and delivered for real businesses, including revampdesign.co and arkhambjj.com. Clean, fast, and handed over working.</p>
+          <div class="tags"><span>Design</span><span>Build</span><span>Deploy</span></div>
+          <span class="arrow">Visit revampdesign.co →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="wrap">
+      <p class="sec-label">About</p>
+      <h2>Who you are working with</h2>
+      <p>
+        Yellow Lotus Consulting Group is built around a simple idea: most
+        businesses do not need more tools, they need the right ones, set up well
+        and kept secure. I spent more than a decade in security and governance,
+        sitting across the table from SOX, PCI, and FISMA auditors, then moved
+        deeper into cloud and DevOps. The background underneath all of it is
+        network and software engineering.
+      </p>
+      <p>
+        That mix is the point. A small business gets enterprise-grade thinking at
+        a price that makes sense. A larger organization gets someone who has
+        actually remediated the findings, rebuilt the pipeline, and been on the
+        call when production was down.
+      </p>
+      <p class="muted">
+        The work above is public on purpose. I would rather show you how I think
+        than tell you.
+      </p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <p class="sec-label">Contact</p>
+      <h2>Let us talk about what you are trying to fix</h2>
+      <p>
+        Whether it is a small business that needs its technology to finally work
+        together, or an enterprise that needs GRC or cloud expertise on contract,
+        the first conversation is free.
+      </p>
+      <a class="cta" href="mailto:yellowlotuscg@gmail.com">yellowlotuscg@gmail.com</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:1rem">
+      <span>Yellow Lotus Consulting Group, LLC</span>
+      <span>
+        <a href="https://github.com/yellowlotuscg">GitHub</a> &nbsp;·&nbsp;
+        <a href="mailto:yellowlotuscg@gmail.com">Email</a>
+      </span>
+    </div>
+  </footer>
+</body>
+</html>
