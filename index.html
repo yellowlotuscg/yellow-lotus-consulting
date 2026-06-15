@@ -181,7 +181,7 @@
 
     .hero{
       position:relative;
-      min-height:78svh;
+      min-height:74svh;
       display:flex;
       align-items:center;
       overflow:hidden;
@@ -204,7 +204,7 @@
       z-index:-2;
       background-image:url("assets/hero-higgsfield-21x9.jpg");
       background-size:cover;
-      background-position:center right;
+      background-position:center center;
       transform:scale(1.02);
       animation:heroDrift 18s ease-in-out infinite alternate;
       transform-origin:62% 48%;
@@ -232,34 +232,6 @@
       gap:14px;
       margin-bottom:26px;
     }
-    .hero-proof{
-      display:grid;
-      grid-template-columns:repeat(3, minmax(0, 1fr));
-      max-width:720px;
-      border:1px solid rgba(242,209,132,.2);
-      background:rgba(8,17,13,.62);
-      backdrop-filter:blur(18px);
-    }
-    .proof-item{
-      min-height:78px;
-      padding:15px 18px;
-      border-right:1px solid rgba(242,209,132,.16);
-    }
-    .proof-item:last-child{border-right:0}
-    .proof-item strong{
-      display:block;
-      margin-bottom:6px;
-      color:var(--gold-2);
-      font-family:var(--serif);
-      font-size:1.32rem;
-      line-height:1;
-    }
-    .proof-item span{
-      color:var(--muted);
-      font-size:.86rem;
-      line-height:1.45;
-    }
-
     .split-head{
       display:grid;
       grid-template-columns:minmax(0, .95fr) minmax(280px, .72fr);
@@ -538,7 +510,6 @@
           linear-gradient(0deg, var(--ink) 0%, rgba(5,7,6,0) 34%);
       }
       .hero-art{background-position:64% center}
-      .hero-proof,
       .tracks,
       .work-grid,
       .about-panel,
@@ -546,8 +517,6 @@
       .proof-row{
         grid-template-columns:1fr;
       }
-      .proof-item{border-right:0; border-bottom:1px solid rgba(242,209,132,.16)}
-      .proof-item:last-child{border-bottom:0}
       .capabilities{grid-template-columns:repeat(2, minmax(0, 1fr))}
       .standards{justify-content:flex-start}
       .case{min-height:0}
@@ -566,7 +535,6 @@
         max-width:720px;
         margin-bottom:22px;
       }
-      .hero-proof{display:none}
     }
 
     @media (max-width:620px){
@@ -586,7 +554,6 @@
       .hero-sub{font-size:1.02rem}
       .hero-actions{margin-bottom:26px}
       .button{width:100%; min-height:50px}
-      .hero-proof{display:none}
       .track{min-height:auto; padding:24px}
       .capabilities{grid-template-columns:1fr}
       .case-media{height:190px}
@@ -639,20 +606,6 @@
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
             <a class="button secondary" href="#work">See the work</a>
-          </div>
-          <div class="hero-proof" aria-label="Core consulting strengths">
-            <div class="proof-item">
-              <strong>AI</strong>
-              <span>Local automation, internal tooling, and workflows that remove operational drag.</span>
-            </div>
-            <div class="proof-item">
-              <strong>GRC</strong>
-              <span>SOX, PCI-DSS, FISMA, NIST CSF, CIS, evidence, and control automation.</span>
-            </div>
-            <div class="proof-item">
-              <strong>Cloud</strong>
-              <span>AWS, Kubernetes, Terraform, CI/CD, observability, and reliability engineering.</span>
-            </div>
           </div>
         </div>
       </div>
