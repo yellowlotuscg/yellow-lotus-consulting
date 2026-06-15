@@ -3,254 +3,804 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Yellow Lotus Consulting Group</title>
-  <meta name="description" content="Technology and security, built to fit your business. Local AI and IT for small businesses; GRC, cloud, and DevOps for the enterprise." />
+  <title>Yellow Lotus Consulting Group | AI, GRC, Cloud, and DevOps Consulting</title>
+  <meta name="description" content="Yellow Lotus Consulting Group builds secure technology systems for small businesses and enterprise teams: practical AI, IT infrastructure, GRC, cloud, DevOps, and audit-ready automation." />
   <meta property="og:title" content="Yellow Lotus Consulting Group" />
-  <meta property="og:description" content="Technology and security, built to fit your business." />
+  <meta property="og:description" content="Technology and security systems that make small teams look enterprise-grade." />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/hero-lotus-network.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root{
-      --bg:#0c0f0d;            /* near-black, faint green undertone */
-      --bg-2:#11150f;
-      --panel:#141a14;
-      --border:#26301f;
-      --text:#eef1ea;
-      --muted:#9aa597;
-      --gold:#caa24a;          /* muted lotus gold */
-      --gold-soft:#e3c986;
-      --green:#7fae7a;         /* understated accent */
-      --serif:"Fraunces", Georgia, "Times New Roman", serif;
-      --sans:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --ink:#050706;
+      --ink-2:#08110d;
+      --forest:#0d2219;
+      --panel:#0d1913;
+      --panel-2:#111e17;
+      --line:rgba(229,199,123,.2);
+      --line-soft:rgba(238,241,232,.1);
+      --text:#f6f1e6;
+      --muted:#aeb8a9;
+      --dim:#778273;
+      --gold:#d8aa45;
+      --gold-2:#f2d184;
+      --sage:#8bb88b;
+      --danger:#c77a57;
+      --serif:"Fraunces", Georgia, serif;
+      --sans:"Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
+
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0; background:var(--bg); color:var(--text); font-family:var(--sans); line-height:1.65; font-size:17px;}
-    a{color:var(--gold-soft); text-decoration:none}
-    a:hover{color:var(--gold); text-decoration:underline; text-underline-offset:3px}
-    .wrap{max-width:940px; margin:0 auto; padding:0 1.5rem}
-    h1,h2,h3{font-family:var(--serif); font-weight:500; letter-spacing:.01em; line-height:1.15}
+    body{
+      margin:0;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 14% 12%, rgba(216,170,69,.12), transparent 27rem),
+        radial-gradient(circle at 86% 36%, rgba(74,128,88,.16), transparent 32rem),
+        linear-gradient(180deg, var(--ink) 0%, #07100c 42%, #040604 100%);
+      font-family:var(--sans);
+      font-size:16px;
+      line-height:1.6;
+    }
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
+      background-size:72px 72px;
+      mask-image:linear-gradient(180deg, rgba(0,0,0,.8), transparent 70%);
+      z-index:-1;
+    }
+    img{max-width:100%; display:block}
+    a{color:inherit; text-decoration:none}
+    .wrap{width:min(1180px, calc(100% - 40px)); margin:0 auto}
+    .section{padding:96px 0; border-top:1px solid var(--line-soft)}
+    h1,h2,h3,p{margin-top:0}
+    h1,h2,h3{font-family:var(--serif); letter-spacing:0; line-height:1.02}
+    h1{
+      max-width:15ch;
+      margin-bottom:22px;
+      font-size:clamp(3.25rem, 7.2vw, 6.45rem);
+      font-weight:700;
+      line-height:.96;
+    }
+    h2{
+      max-width:760px;
+      margin-bottom:22px;
+      font-size:clamp(2.35rem, 5vw, 5rem);
+      font-weight:600;
+    }
+    h3{font-size:1.45rem; font-weight:600}
+    .lead{
+      max-width:700px;
+      color:var(--muted);
+      font-size:clamp(1.05rem, 2vw, 1.28rem);
+      line-height:1.65;
+    }
+    .label{
+      margin:0 0 16px;
+      color:var(--gold-2);
+      font-size:.74rem;
+      font-weight:700;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+    }
 
-    /* nav */
-    nav{position:sticky; top:0; z-index:10; backdrop-filter:blur(8px);
-        background:rgba(12,15,13,.78); border-bottom:1px solid var(--border)}
-    .nav-in{display:flex; align-items:center; justify-content:space-between; padding:.85rem 0}
-    .brand{display:flex; align-items:center; gap:.6rem; font-family:var(--serif); font-size:1.05rem; color:var(--text)}
-    .brand:hover{text-decoration:none}
-    .brand svg{flex:none}
-    .nav-links a{color:var(--muted); margin-left:1.4rem; font-size:.92rem}
-    .nav-links a:hover{color:var(--text); text-decoration:none}
-    @media (max-width:620px){ .nav-links{display:none} }
+    .topbar{
+      position:fixed;
+      inset:0 0 auto;
+      z-index:30;
+      border-bottom:1px solid rgba(242,209,132,.18);
+      background:rgba(5,7,6,.72);
+      backdrop-filter:blur(20px);
+    }
+    .nav{
+      min-height:76px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:28px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:0;
+      font-family:var(--serif);
+      font-weight:700;
+      letter-spacing:.02em;
+    }
+    .brand-mark{
+      width:40px;
+      height:40px;
+      flex:0 0 auto;
+      filter:drop-shadow(0 0 22px rgba(216,170,69,.28));
+    }
+    .brand-name{
+      display:flex;
+      flex-direction:column;
+      line-height:1.02;
+      white-space:nowrap;
+    }
+    .brand-name span:first-child{font-size:1.05rem}
+    .brand-name span:last-child{
+      color:var(--gold-2);
+      font-family:var(--sans);
+      font-size:.62rem;
+      font-weight:700;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+    }
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:26px;
+      color:rgba(246,241,230,.74);
+      font-size:.88rem;
+      font-weight:600;
+    }
+    .nav-links a{transition:color .18s ease}
+    .nav-links a:hover{color:var(--gold-2)}
 
-    /* hero */
-    header.hero{padding:6rem 0 4rem}
-    .eyebrow{color:var(--gold); font-size:.8rem; letter-spacing:.16em; text-transform:uppercase; margin:0 0 1.2rem}
-    h1{font-size:clamp(2.4rem,6vw,3.8rem); margin:0 0 1.2rem; max-width:16ch}
-    .hero p{font-size:1.2rem; color:var(--muted); max-width:58ch; margin:0 0 2rem}
-    .cta{display:inline-block; background:var(--gold); color:#1a150a; font-weight:600; padding:.7rem 1.3rem; border-radius:8px; font-size:.95rem}
-    .cta:hover{background:var(--gold-soft); text-decoration:none}
-    .cta.ghost{background:transparent; color:var(--text); border:1px solid var(--border); margin-left:.6rem}
-    .cta.ghost:hover{border-color:var(--gold)}
+    .button{
+      min-height:46px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:0 20px;
+      border:1px solid rgba(242,209,132,.42);
+      border-radius:8px;
+      background:linear-gradient(135deg, var(--gold-2), var(--gold));
+      color:#171106;
+      font-weight:800;
+      font-size:.92rem;
+      line-height:1;
+      box-shadow:0 18px 46px rgba(216,170,69,.2);
+      transition:transform .18s ease, border-color .18s ease, background .18s ease;
+    }
+    .button:hover{transform:translateY(-2px)}
+    .button.secondary{
+      background:rgba(5,7,6,.35);
+      color:var(--text);
+      box-shadow:none;
+    }
+    .button.secondary:hover{border-color:rgba(242,209,132,.8)}
+    .button svg{width:17px; height:17px}
 
-    section{padding:4rem 0; border-top:1px solid var(--border)}
-    .sec-label{color:var(--gold); font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; margin:0 0 .5rem}
-    h2{font-size:clamp(1.7rem,4vw,2.3rem); margin:0 0 1.4rem}
-    .lead{color:var(--muted); max-width:62ch; font-size:1.08rem}
+    .hero{
+      position:relative;
+      min-height:78svh;
+      display:flex;
+      align-items:center;
+      overflow:hidden;
+      isolation:isolate;
+      padding:104px 0 44px;
+      border-bottom:1px solid rgba(242,209,132,.18);
+    }
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(90deg, rgba(5,7,6,.96) 0%, rgba(5,7,6,.84) 34%, rgba(5,7,6,.2) 66%, rgba(5,7,6,.48) 100%),
+        linear-gradient(0deg, var(--ink) 0%, rgba(5,7,6,0) 26%);
+      z-index:-1;
+    }
+    .hero-art{
+      position:absolute;
+      inset:0;
+      z-index:-2;
+      background-image:url("assets/hero-lotus-network.png");
+      background-size:cover;
+      background-position:center right;
+      transform:scale(1.01);
+    }
+    .hero-copy{max-width:820px}
+    .hero-sub{
+      max-width:690px;
+      margin-bottom:30px;
+      color:rgba(246,241,230,.78);
+      font-size:clamp(1.08rem, 1.8vw, 1.28rem);
+      line-height:1.65;
+    }
+    .hero-actions{
+      display:flex;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-bottom:26px;
+    }
+    .hero-proof{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0, 1fr));
+      max-width:820px;
+      border:1px solid rgba(242,209,132,.2);
+      background:rgba(8,17,13,.62);
+      backdrop-filter:blur(18px);
+    }
+    .proof-item{
+      min-height:92px;
+      padding:18px 20px;
+      border-right:1px solid rgba(242,209,132,.16);
+    }
+    .proof-item:last-child{border-right:0}
+    .proof-item strong{
+      display:block;
+      margin-bottom:6px;
+      color:var(--gold-2);
+      font-family:var(--serif);
+      font-size:1.52rem;
+      line-height:1;
+    }
+    .proof-item span{
+      color:var(--muted);
+      font-size:.86rem;
+      line-height:1.45;
+    }
 
-    /* services */
-    .tracks{display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; margin-top:2rem}
-    @media (max-width:720px){ .tracks{grid-template-columns:1fr} }
-    .track{background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:1.6rem}
-    .track h3{font-size:1.35rem; margin:.2rem 0 .3rem}
-    .track .who{color:var(--gold-soft); font-size:.85rem; letter-spacing:.04em; margin:0 0 1rem}
-    .track ul{list-style:none; padding:0; margin:0}
-    .track li{padding:.42rem 0 .42rem 1.4rem; position:relative; color:var(--text); font-size:.97rem}
-    .track li::before{content:""; position:absolute; left:0; top:.95rem; width:7px; height:7px; border-radius:50%; background:var(--green)}
-    .track li span{color:var(--muted)}
+    .split-head{
+      display:grid;
+      grid-template-columns:minmax(0, .95fr) minmax(280px, .72fr);
+      gap:64px;
+      align-items:end;
+      margin-bottom:44px;
+    }
+    .tracks{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:18px;
+    }
+    .track{
+      position:relative;
+      min-height:560px;
+      padding:34px;
+      border:1px solid var(--line);
+      background:
+        radial-gradient(circle at 78% 20%, rgba(216,170,69,.12), transparent 18rem),
+        linear-gradient(145deg, rgba(17,30,23,.96), rgba(9,18,13,.9));
+      overflow:hidden;
+    }
+    .track::after{
+      content:"";
+      position:absolute;
+      right:-90px;
+      bottom:-120px;
+      width:300px;
+      height:300px;
+      border:1px solid rgba(216,170,69,.18);
+      border-radius:50%;
+      opacity:.65;
+    }
+    .track h3{margin-bottom:12px; font-size:clamp(1.8rem, 3vw, 2.7rem)}
+    .track p{max-width:560px; color:var(--muted)}
+    .track-list{
+      position:relative;
+      z-index:1;
+      display:grid;
+      gap:18px;
+      margin:34px 0 0;
+      padding:0;
+      list-style:none;
+    }
+    .track-list li{
+      display:grid;
+      grid-template-columns:32px minmax(0, 1fr);
+      gap:14px;
+      align-items:start;
+    }
+    .track-icon{
+      width:32px;
+      height:32px;
+      display:grid;
+      place-items:center;
+      border:1px solid rgba(242,209,132,.35);
+      color:var(--gold-2);
+      background:rgba(216,170,69,.06);
+    }
+    .track-list b{display:block; margin-bottom:3px}
+    .track-list span{color:var(--muted); font-size:.94rem; line-height:1.5}
 
-    /* work / case studies */
-    .work{display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; margin-top:2rem}
-    @media (max-width:720px){ .work{grid-template-columns:1fr} }
-    .case{display:block; background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:1.5rem; color:var(--text)}
-    .case:hover{border-color:var(--gold); text-decoration:none; transform:translateY(-2px); transition:all .15s ease}
-    .case .kind{color:var(--gold); font-size:.74rem; letter-spacing:.12em; text-transform:uppercase}
-    .case h3{font-size:1.25rem; margin:.4rem 0 .5rem}
-    .case p{color:var(--muted); font-size:.95rem; margin:0 0 1rem}
-    .case .tags{display:flex; flex-wrap:wrap; gap:.35rem}
-    .case .tags span{font-size:.72rem; color:var(--muted); border:1px solid var(--border); border-radius:999px; padding:.15rem .55rem}
-    .case .arrow{color:var(--gold-soft); font-size:.85rem; margin-top:1rem; display:inline-block}
+    .capabilities{
+      display:grid;
+      grid-template-columns:repeat(4, minmax(0, 1fr));
+      border-top:1px solid var(--line-soft);
+      border-left:1px solid var(--line-soft);
+    }
+    .capability{
+      min-height:210px;
+      padding:26px;
+      border-right:1px solid var(--line-soft);
+      border-bottom:1px solid var(--line-soft);
+      background:rgba(255,255,255,.018);
+    }
+    .capability strong{
+      display:block;
+      margin-bottom:12px;
+      color:var(--text);
+      font-family:var(--serif);
+      font-size:1.35rem;
+      line-height:1.15;
+    }
+    .capability span{color:var(--muted); font-size:.93rem}
 
-    /* about */
-    .about p{max-width:64ch; color:var(--text)}
-    .about p + p{margin-top:1rem}
-    .about .muted{color:var(--muted)}
+    .work-grid{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0, 1fr));
+      gap:18px;
+      margin-top:42px;
+    }
+    .case{
+      display:flex;
+      min-height:520px;
+      flex-direction:column;
+      border:1px solid var(--line);
+      background:rgba(13,25,19,.76);
+      transition:transform .18s ease, border-color .18s ease;
+    }
+    .case:hover{
+      transform:translateY(-4px);
+      border-color:rgba(242,209,132,.58);
+    }
+    .case-media{
+      height:205px;
+      overflow:hidden;
+      border-bottom:1px solid var(--line-soft);
+      background:#050706;
+    }
+    .case-media img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transform:scale(1.015);
+    }
+    .case:nth-child(1) .case-media img{object-position:left center}
+    .case:nth-child(2) .case-media img{object-position:center center}
+    .case:nth-child(3) .case-media img{object-position:right center}
+    .case-body{
+      display:flex;
+      flex:1;
+      flex-direction:column;
+      padding:26px;
+    }
+    .case-type{
+      margin-bottom:16px;
+      color:var(--gold-2);
+      font-size:.72rem;
+      font-weight:800;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+    }
+    .case h3{margin-bottom:14px}
+    .case p{color:var(--muted); font-size:.94rem}
+    .tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin:10px 0 24px;
+    }
+    .tags span{
+      padding:6px 9px;
+      border:1px solid rgba(242,209,132,.18);
+      color:rgba(246,241,230,.72);
+      font-size:.74rem;
+      font-weight:700;
+    }
+    .case-link{
+      margin-top:auto;
+      color:var(--gold-2);
+      font-weight:800;
+      font-size:.9rem;
+    }
 
-    /* contact */
-    .contact{text-align:center; padding:5rem 0}
-    .contact h2{margin-bottom:1rem}
-    .contact p{color:var(--muted); max-width:48ch; margin:0 auto 2rem}
+    .proof-band{
+      padding:34px 0;
+      border-block:1px solid var(--line-soft);
+      background:rgba(255,255,255,.018);
+    }
+    .proof-row{
+      display:grid;
+      grid-template-columns:.72fr 1fr;
+      gap:42px;
+      align-items:center;
+    }
+    .proof-row p{margin-bottom:0; color:var(--muted)}
+    .standards{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      gap:10px;
+    }
+    .standards span{
+      padding:10px 13px;
+      border:1px solid rgba(242,209,132,.18);
+      color:rgba(246,241,230,.76);
+      font-size:.76rem;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
 
-    footer{border-top:1px solid var(--border); padding:2.5rem 0; color:var(--muted); font-size:.85rem; display:flex; justify-content:space-between; flex-wrap:wrap; gap:1rem}
+    .about-panel{
+      display:grid;
+      grid-template-columns:minmax(300px, .76fr) minmax(0, 1fr);
+      gap:54px;
+      align-items:center;
+    }
+    .about-emblem{
+      position:relative;
+      min-height:480px;
+      border:1px solid var(--line);
+      background:
+        radial-gradient(circle at center, rgba(216,170,69,.18), transparent 17rem),
+        linear-gradient(145deg, rgba(17,30,23,.86), rgba(5,7,6,.94));
+      overflow:hidden;
+    }
+    .about-emblem svg{
+      position:absolute;
+      inset:50% auto auto 50%;
+      width:min(340px, 78%);
+      transform:translate(-50%, -50%);
+      color:var(--gold-2);
+      filter:drop-shadow(0 0 42px rgba(216,170,69,.25));
+    }
+    .about-emblem::before{
+      content:"";
+      position:absolute;
+      inset:34px;
+      border:1px solid rgba(242,209,132,.14);
+    }
+    .about-copy p{color:var(--muted)}
+    .principles{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:16px;
+      margin-top:32px;
+    }
+    .principle{
+      padding:20px;
+      border:1px solid var(--line-soft);
+      background:rgba(255,255,255,.018);
+    }
+    .principle b{display:block; margin-bottom:7px}
+    .principle span{color:var(--muted); font-size:.9rem}
+
+    .contact{
+      position:relative;
+      overflow:hidden;
+      padding:104px 0;
+      border-top:1px solid var(--line-soft);
+      background:
+        linear-gradient(90deg, rgba(8,17,13,.96), rgba(8,17,13,.62)),
+        url("assets/hero-lotus-network.png") center right / cover;
+    }
+    .contact h2{max-width:820px}
+    .contact .lead{margin-bottom:34px}
+    .contact-actions{display:flex; flex-wrap:wrap; gap:14px}
+
+    footer{
+      padding:36px 0;
+      border-top:1px solid var(--line-soft);
+      color:var(--dim);
+      font-size:.86rem;
+    }
+    .footer-in{
+      display:flex;
+      justify-content:space-between;
+      gap:22px;
+      flex-wrap:wrap;
+    }
     footer a{color:var(--muted)}
+    footer a:hover{color:var(--gold-2)}
+
+    @media (max-width:900px){
+      .nav{min-height:68px}
+      .nav-links{display:none}
+      .brand-name span:first-child{font-size:.95rem}
+      .hero{min-height:88svh; padding-top:112px}
+      .hero::before{
+        background:
+          linear-gradient(90deg, rgba(5,7,6,.96) 0%, rgba(5,7,6,.78) 52%, rgba(5,7,6,.3) 100%),
+          linear-gradient(0deg, var(--ink) 0%, rgba(5,7,6,0) 34%);
+      }
+      .hero-art{background-position:64% center}
+      .hero-proof,
+      .tracks,
+      .work-grid,
+      .about-panel,
+      .split-head,
+      .proof-row{
+        grid-template-columns:1fr;
+      }
+      .proof-item{border-right:0; border-bottom:1px solid rgba(242,209,132,.16)}
+      .proof-item:last-child{border-bottom:0}
+      .capabilities{grid-template-columns:repeat(2, minmax(0, 1fr))}
+      .standards{justify-content:flex-start}
+      .case{min-height:0}
+    }
+
+    @media (max-width:1100px){
+      h1{
+        max-width:14ch;
+        font-size:clamp(3rem, 7vw, 5rem);
+      }
+      .hero{
+        min-height:82svh;
+        padding:92px 0 34px;
+      }
+      .hero-sub{
+        max-width:720px;
+        margin-bottom:22px;
+      }
+      .hero-proof{display:none}
+    }
+
+    @media (max-width:620px){
+      .wrap{width:min(100% - 28px, 1180px)}
+      .section{padding:72px 0}
+      h1{font-size:clamp(3.15rem, 19vw, 5.6rem)}
+      h2{font-size:clamp(2.05rem, 12vw, 3.4rem)}
+      .brand-name span:first-child{max-width:190px; overflow:hidden; text-overflow:ellipsis}
+      .topbar .button{display:none}
+      .hero{align-items:flex-end; min-height:91svh; padding-bottom:38px}
+      .hero-sub{font-size:1.02rem}
+      .hero-actions{margin-bottom:26px}
+      .button{width:100%; min-height:50px}
+      .hero-proof{display:none}
+      .track{min-height:auto; padding:24px}
+      .capabilities{grid-template-columns:1fr}
+      .case-media{height:190px}
+      .principles{grid-template-columns:1fr}
+      .about-emblem{min-height:330px}
+      .contact{padding:78px 0}
+    }
   </style>
 </head>
 <body>
-  <nav>
-    <div class="wrap nav-in">
-      <a class="brand" href="#top">
-        <svg width="26" height="26" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-          <path d="M24 42c-9 0-16-5-16-12 3 1 6 1 9-1-4-3-6-8-5-13 4 2 7 5 8 9 1-5 1-10 4-14 3 4 3 9 4 14 1-4 4-7 8-9 1 5-1 10-5 13 3 2 6 2 9 1 0 7-7 12-16 12z" fill="#caa24a" fill-opacity="0.92"/>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="Yellow Lotus Consulting Group home">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <defs>
+            <linearGradient id="gold" x1="12" x2="52" y1="10" y2="56" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#f7d98a" />
+              <stop offset=".55" stop-color="#d8aa45" />
+              <stop offset="1" stop-color="#a77422" />
+            </linearGradient>
+          </defs>
+          <path d="M32 55C19 53 9 46 8 35c7 2 13 1 18-4-7-3-11-11-10-20 8 3 13 9 16 18 3-9 8-15 16-18 1 9-3 17-10 20 5 5 11 6 18 4-1 11-11 18-24 20Z" fill="url(#gold)" />
+          <path d="M32 48V22m0 0 5-8m-5 8-5-8m-9 27 9-7m19 7-9-7" fill="none" stroke="#050706" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity=".72" />
+          <circle cx="32" cy="22" r="3" fill="#050706" opacity=".72" />
+          <circle cx="18" cy="41" r="2.6" fill="#050706" opacity=".72" />
+          <circle cx="46" cy="41" r="2.6" fill="#050706" opacity=".72" />
         </svg>
-        Yellow Lotus Consulting Group
+        <span class="brand-name">
+          <span>Yellow Lotus</span>
+          <span>Consulting Group</span>
+        </span>
       </a>
-      <div class="nav-links">
+      <nav class="nav-links" aria-label="Primary navigation">
         <a href="#services">Services</a>
+        <a href="#capabilities">Capabilities</a>
         <a href="#work">Work</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
-      </div>
-    </div>
-  </nav>
-
-  <a id="top"></a>
-  <header class="hero">
-    <div class="wrap">
-      <p class="eyebrow">Yellow Lotus Consulting Group</p>
-      <h1>Technology and security, built to fit your business.</h1>
-      <p>
-        For small businesses, that means practical AI, IT, and software that make
-        you run like a far better funded version of yourself. For larger
-        organizations, it means GRC, cloud, and DevOps work from someone who has
-        carried real audits and real production incidents.
-      </p>
-      <a class="cta" href="#contact">Start a conversation</a>
-      <a class="cta ghost" href="#work">See the work</a>
+      </nav>
+      <a class="button secondary" href="#contact">Start a conversation</a>
     </div>
   </header>
 
-  <section id="services">
-    <div class="wrap">
-      <p class="sec-label">What we do</p>
-      <h2>Two ways we work</h2>
-      <p class="lead">
-        The same standard applies to both: technology that fits together, stays
-        out of the way, and holds up to scrutiny.
-      </p>
-      <div class="tracks">
-        <div class="track">
-          <h3>For small businesses</h3>
-          <p class="who">Practical tech, priced to be reachable</p>
-          <ul>
-            <li>Local AI and IT infrastructure <span>that solves a specific business problem, without a per-seat SaaS bill</span></li>
-            <li>Servers <span>hosted for you, or built and handed over, your call</span></li>
-            <li>Applications <span>built from scratch or wired into the tools you already run</span></li>
-            <li>Websites <span>designed and shipped, like revampdesign.co and arkhambjj.com</span></li>
-            <li>Security baked in <span>so the foundation is sound from day one</span></li>
-          </ul>
-        </div>
-        <div class="track">
-          <h3>For mid-size and enterprise</h3>
-          <p class="who">Contract work, deep in two disciplines</p>
-          <ul>
-            <li>Governance, Risk, and Compliance <span>SOX, PCI-DSS, FISMA, NIST CSF, CIS, evidence and control automation</span></li>
-            <li>CloudOps and DevOps <span>AWS, Kubernetes, Terraform, Ansible, CI/CD, observability</span></li>
-            <li>Reliability engineering <span>finding the root cause and fixing it, not papering over it</span></li>
-            <li>A foundation in network and software engineering <span>that informs every recommendation</span></li>
-          </ul>
+  <main id="top">
+    <section class="hero" aria-label="Yellow Lotus Consulting Group">
+      <div class="hero-art" aria-hidden="true"></div>
+      <div class="wrap">
+        <div class="hero-copy">
+          <h1>Yellow Lotus Consulting Group</h1>
+          <p class="hero-sub">Technology and security systems that make small teams look enterprise-grade, and help larger organizations move with cleaner evidence, stronger infrastructure, and fewer production surprises.</p>
+          <div class="hero-actions">
+            <a class="button" href="#contact">
+              Start a conversation
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="button secondary" href="#work">See the work</a>
+          </div>
+          <div class="hero-proof" aria-label="Core consulting strengths">
+            <div class="proof-item">
+              <strong>AI</strong>
+              <span>Local automation, internal tooling, and workflows that remove operational drag.</span>
+            </div>
+            <div class="proof-item">
+              <strong>GRC</strong>
+              <span>SOX, PCI-DSS, FISMA, NIST CSF, CIS, evidence, and control automation.</span>
+            </div>
+            <div class="proof-item">
+              <strong>Cloud</strong>
+              <span>AWS, Kubernetes, Terraform, CI/CD, observability, and reliability engineering.</span>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="work">
-    <div class="wrap">
-      <p class="sec-label">Selected work</p>
-      <h2>Case studies</h2>
-      <p class="lead">
-        Open-source builds that show how the work is done. Each one is a real
-        problem, the approach, and the result. They run on synthetic data, not
-        client data.
-      </p>
-      <div class="work">
-        <a class="case" href="https://github.com/yellowlotuscg/cloudriskiq">
-          <span class="kind">Security &amp; Compliance</span>
-          <h3>CloudRiskIQ</h3>
-          <p>Pulls security findings from AWS, Azure, endpoints, and GitHub, scores them by real risk, maps each to NIST CSF, CIS, PCI, SOX, and FISMA, and produces an audit-ready evidence pack.</p>
-          <div class="tags"><span>FastAPI</span><span>Next.js</span><span>Python</span><span>Control mapping</span></div>
-          <span class="arrow">View the case study →</span>
-        </a>
-        <a class="case" href="https://github.com/yellowlotuscg/self-healing-k8s-pipeline">
-          <span class="kind">CloudOps &amp; DevOps</span>
-          <h3>Self-healing Kubernetes pipeline</h3>
-          <p>A real EKS incident, a pod-scheduling stampede that cascaded into node failures, reproduced on a local cluster and fixed properly: right-sized requests, tuned probes, disruption budgets, and the alerts that would have caught it.</p>
-          <div class="tags"><span>Kubernetes</span><span>Terraform</span><span>Prometheus</span><span>CI/CD</span></div>
-          <span class="arrow">View the case study →</span>
-        </a>
-        <a class="case" href="https://github.com/yellowlotuscg/leetcode-reasoning">
-          <span class="kind">Problem solving</span>
-          <h3>Algorithms, with the reasoning</h3>
-          <p>Classic algorithm problems worked through in Python, with the thinking written out: how I read the problem, find the invariant, and pick the simplest structure that hits the target complexity.</p>
-          <div class="tags"><span>Python</span><span>Data structures</span><span>Complexity</span></div>
-          <span class="arrow">View the case study →</span>
-        </a>
-        <a class="case" href="https://revampdesign.co">
-          <span class="kind">Web</span>
-          <h3>Websites we have shipped</h3>
-          <p>Sites built and delivered for real businesses, including revampdesign.co and arkhambjj.com. Clean, fast, and handed over working.</p>
-          <div class="tags"><span>Design</span><span>Build</span><span>Deploy</span></div>
-          <span class="arrow">Visit revampdesign.co →</span>
-        </a>
+    <section class="section" id="services">
+      <div class="wrap">
+        <div class="split-head">
+          <div>
+            <p class="label">Two ways we work</p>
+            <h2>Built for the gap between business urgency and technical reality.</h2>
+          </div>
+          <p class="lead">Yellow Lotus is for operators who need technology to stop being fragile. The work is practical, secure by design, and sized to the organization in front of us.</p>
+        </div>
+
+        <div class="tracks">
+          <article class="track">
+            <p class="label">Small business track</p>
+            <h3>Enterprise-grade thinking without enterprise waste.</h3>
+            <p>For owners who need AI, infrastructure, apps, websites, and security to finally work together.</p>
+            <ul class="track-list">
+              <li>
+                <span class="track-icon">AI</span>
+                <span><b>Local AI that works</b><span>Automations, copilots, and internal tools tied to real workflows.</span></span>
+              </li>
+              <li>
+                <span class="track-icon">IT</span>
+                <span><b>Infrastructure you can trust</b><span>Servers, backups, networks, and secure access that do not need a full-time department.</span></span>
+              </li>
+              <li>
+                <span class="track-icon">UX</span>
+                <span><b>Applications and websites</b><span>Custom tools and premium web presences shipped cleanly, then handed over working.</span></span>
+              </li>
+            </ul>
+          </article>
+
+          <article class="track">
+            <p class="label">Enterprise track</p>
+            <h3>Deep contract work where risk, audit, and uptime meet.</h3>
+            <p>For teams that need a hands-on operator across governance, cloud, DevOps, and reliability.</p>
+            <ul class="track-list">
+              <li>
+                <span class="track-icon">RM</span>
+                <span><b>Governance, risk, and compliance</b><span>Control mapping, evidence packs, remediation plans, and audit automation.</span></span>
+              </li>
+              <li>
+                <span class="track-icon">CL</span>
+                <span><b>CloudOps and DevOps</b><span>AWS, Kubernetes, Terraform, Ansible, pipelines, deployment safety, and observability.</span></span>
+              </li>
+              <li>
+                <span class="track-icon">RE</span>
+                <span><b>Reliability engineering</b><span>Root cause analysis and durable fixes instead of patches that reappear next quarter.</span></span>
+              </li>
+            </ul>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="about" class="about">
-    <div class="wrap">
-      <p class="sec-label">About</p>
-      <h2>Who you are working with</h2>
-      <p>
-        Yellow Lotus Consulting Group is built around a simple idea: most
-        businesses do not need more tools, they need the right ones, set up well
-        and kept secure. I spent more than a decade in security and governance,
-        sitting across the table from SOX, PCI, and FISMA auditors, then moved
-        deeper into cloud and DevOps. The background underneath all of it is
-        network and software engineering.
-      </p>
-      <p>
-        That mix is the point. A small business gets enterprise-grade thinking at
-        a price that makes sense. A larger organization gets someone who has
-        actually remediated the findings, rebuilt the pipeline, and been on the
-        call when production was down.
-      </p>
-      <p class="muted">
-        The work above is public on purpose. I would rather show you how I think
-        than tell you.
-      </p>
-    </div>
-  </section>
+    <section class="section" id="capabilities">
+      <div class="wrap">
+        <p class="label">Capabilities</p>
+        <h2>A sharper operating layer for technology, security, and delivery.</h2>
+        <div class="capabilities" aria-label="Consulting capabilities">
+          <div class="capability"><strong>Secure AI enablement</strong><span>Local AI systems, agent workflows, private knowledge tools, and business automations with practical guardrails.</span></div>
+          <div class="capability"><strong>Audit-ready GRC</strong><span>SOX, PCI-DSS, FISMA, NIST CSF, CIS, evidence collection, control design, and remediation tracking.</span></div>
+          <div class="capability"><strong>Cloud architecture</strong><span>AWS environments, Kubernetes platforms, Terraform, secrets, access controls, and cost-aware reliability.</span></div>
+          <div class="capability"><strong>DevOps delivery</strong><span>CI/CD, deployment hygiene, observability, incident learning, and pipelines that reduce fear around change.</span></div>
+          <div class="capability"><strong>Internal tooling</strong><span>Fast applications that remove repetitive work, connect existing tools, and make operational decisions visible.</span></div>
+          <div class="capability"><strong>Web presence</strong><span>Premium websites, conversion paths, brand systems, analytics, and launch support for local and specialized businesses.</span></div>
+          <div class="capability"><strong>Security foundation</strong><span>Network hygiene, endpoint posture, access strategy, backups, vulnerability context, and secure-by-default implementation.</span></div>
+          <div class="capability"><strong>Executive clarity</strong><span>Plain-English decision briefs, risk tradeoffs, implementation roadmaps, and metrics that leadership can act on.</span></div>
+        </div>
+      </div>
+    </section>
 
-  <section id="contact" class="contact">
-    <div class="wrap">
-      <p class="sec-label">Contact</p>
-      <h2>Let us talk about what you are trying to fix</h2>
-      <p>
-        Whether it is a small business that needs its technology to finally work
-        together, or an enterprise that needs GRC or cloud expertise on contract,
-        the first conversation is free.
-      </p>
-      <a class="cta" href="mailto:yellowlotuscg@gmail.com">yellowlotuscg@gmail.com</a>
-    </div>
-  </section>
+    <section class="proof-band" aria-label="Standards and platforms">
+      <div class="wrap proof-row">
+        <p><b>Comfortable in serious environments.</b> The same operating discipline applies whether the job is a local business stack or an enterprise control program.</p>
+        <div class="standards">
+          <span>SOX</span>
+          <span>PCI-DSS</span>
+          <span>FISMA</span>
+          <span>NIST CSF</span>
+          <span>CIS</span>
+          <span>AWS</span>
+          <span>Kubernetes</span>
+          <span>Terraform</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="wrap">
+        <p class="label">Selected work</p>
+        <h2>Public builds that show the thinking, not just the claims.</h2>
+        <p class="lead">The case studies use synthetic data and open-source repos, but the patterns are real: risk scoring, evidence automation, incident repair, and systems thinking under pressure.</p>
+
+        <div class="work-grid">
+          <a class="case" href="https://github.com/yellowlotuscg/cloudriskiq">
+            <div class="case-media"><img src="assets/case-study-panels.png" alt="Golden shield over a cloud infrastructure grid" loading="lazy" /></div>
+            <div class="case-body">
+              <span class="case-type">Security and compliance</span>
+              <h3>CloudRiskIQ</h3>
+              <p>Pulls findings from cloud, endpoint, and code systems, scores them by real risk, maps them to control frameworks, and produces an audit-ready evidence pack.</p>
+              <div class="tags"><span>FastAPI</span><span>Next.js</span><span>Control mapping</span><span>Risk scoring</span></div>
+              <span class="case-link">View the case study</span>
+            </div>
+          </a>
+
+          <a class="case" href="https://github.com/yellowlotuscg/self-healing-k8s-pipeline">
+            <div class="case-media"><img src="assets/case-study-panels.png" alt="Golden evidence pipeline flowing into a lotus control hub" loading="lazy" /></div>
+            <div class="case-body">
+              <span class="case-type">CloudOps and DevOps</span>
+              <h3>Self-healing Kubernetes pipeline</h3>
+              <p>A pod-scheduling incident reproduced locally and fixed through requests, probes, disruption budgets, alerting, and better deployment pressure management.</p>
+              <div class="tags"><span>Kubernetes</span><span>Terraform</span><span>Prometheus</span><span>CI/CD</span></div>
+              <span class="case-link">View the case study</span>
+            </div>
+          </a>
+
+          <a class="case" href="https://revampdesign.co">
+            <div class="case-media"><img src="assets/case-study-panels.png" alt="Golden cloud and DevOps architecture nodes" loading="lazy" /></div>
+            <div class="case-body">
+              <span class="case-type">Web and systems</span>
+              <h3>Sites and tools shipped</h3>
+              <p>Clean websites, local business systems, and custom applications built to look credible, load quickly, and keep the owner out of technical cleanup.</p>
+              <div class="tags"><span>Design</span><span>Build</span><span>Deploy</span><span>Handoff</span></div>
+              <span class="case-link">Visit revampdesign.co</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="wrap about-panel">
+        <div class="about-emblem" aria-hidden="true">
+          <svg viewBox="0 0 64 64">
+            <path d="M32 55C19 53 9 46 8 35c7 2 13 1 18-4-7-3-11-11-10-20 8 3 13 9 16 18 3-9 8-15 16-18 1 9-3 17-10 20 5 5 11 6 18 4-1 11-11 18-24 20Z" fill="currentColor" opacity=".9"/>
+            <path d="M32 48V22m0 0 5-8m-5 8-5-8m-9 27 9-7m19 7-9-7" fill="none" stroke="#050706" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity=".72" />
+          </svg>
+        </div>
+        <div class="about-copy">
+          <p class="label">About Yellow Lotus</p>
+          <h2>Security is the foundation. Useful systems are the outcome.</h2>
+          <p>Yellow Lotus Consulting Group is built around a simple idea: most businesses do not need more tools, they need the right ones, set up well and kept secure.</p>
+          <p>The background is more than a decade across security, governance, cloud, DevOps, network engineering, and software. That matters because the best recommendations survive both the audit table and the production incident.</p>
+          <div class="principles">
+            <div class="principle"><b>Pragmatic</b><span>Solve the real constraint in front of the business.</span></div>
+            <div class="principle"><b>Secure by design</b><span>Risk, access, evidence, and reliability are built in early.</span></div>
+            <div class="principle"><b>Operator-minded</b><span>Systems are built for the people who will actually run them.</span></div>
+            <div class="principle"><b>Evidence-driven</b><span>Show the work, explain the tradeoff, and leave artifacts behind.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <p class="label">Contact</p>
+        <h2>Tell me what keeps breaking, slowing you down, or making audits harder than they should be.</h2>
+        <p class="lead">Whether you need a small business technology foundation or enterprise GRC, cloud, and DevOps support, the first conversation is free.</p>
+        <div class="contact-actions">
+          <a class="button" href="mailto:yellowlotuscg@gmail.com">
+            yellowlotuscg@gmail.com
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="button secondary" href="https://github.com/yellowlotuscg">View GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <div class="wrap" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:1rem">
+    <div class="wrap footer-in">
       <span>Yellow Lotus Consulting Group, LLC</span>
-      <span>
-        <a href="https://github.com/yellowlotuscg">GitHub</a> &nbsp;·&nbsp;
-        <a href="mailto:yellowlotuscg@gmail.com">Email</a>
-      </span>
+      <span><a href="https://github.com/yellowlotuscg">GitHub</a> &nbsp;/&nbsp; <a href="mailto:yellowlotuscg@gmail.com">Email</a></span>
     </div>
   </footer>
 </body>
