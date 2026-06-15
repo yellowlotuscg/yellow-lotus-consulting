@@ -69,7 +69,7 @@
     h1,h2,h3,p{margin-top:0}
     h1,h2,h3{font-family:var(--serif); letter-spacing:0; line-height:1.02}
     h1{
-      max-width:9.8ch;
+      max-width:7.5ch;
       margin-bottom:22px;
       font-size:clamp(3.25rem, 6.3vw, 5.95rem);
       font-weight:700;
@@ -182,12 +182,12 @@
 
     .hero{
       position:relative;
-      min-height:74svh;
+      min-height:84svh;
       display:flex;
       align-items:center;
       overflow:hidden;
       isolation:isolate;
-      padding:104px 0 44px;
+      padding:104px 0 58px;
       border-bottom:1px solid rgba(242,209,132,.18);
     }
     .hero::before{
@@ -210,7 +210,7 @@
       animation:heroDrift 18s ease-in-out infinite alternate;
       transform-origin:62% 48%;
     }
-    .hero-copy{max-width:820px}
+    .hero-copy{max-width:580px}
     .hero-seal{
       width:76px;
       height:76px;
@@ -220,11 +220,11 @@
       filter:drop-shadow(0 18px 38px rgba(0,0,0,.38)) drop-shadow(0 0 30px rgba(216,170,69,.18));
     }
     .hero-sub{
-      max-width:660px;
-      margin-bottom:30px;
+      max-width:520px;
+      margin-bottom:28px;
       color:rgba(246,241,230,.78);
-      font-size:clamp(1.08rem, 1.8vw, 1.28rem);
-      line-height:1.65;
+      font-size:clamp(1.08rem, 1.55vw, 1.18rem);
+      line-height:1.5;
     }
     .hero-actions{
       display:flex;
@@ -247,7 +247,7 @@
     }
     .track{
       position:relative;
-      min-height:560px;
+      min-height:430px;
       padding:34px;
       border:1px solid var(--line);
       background:
@@ -504,7 +504,7 @@
       .nav-links{display:none}
       .brand-name span:first-child{font-size:.95rem}
       .brand-mark{width:42px; height:42px}
-      .hero{min-height:88svh; padding-top:112px}
+      .hero{min-height:89svh; padding-top:112px}
       .hero::before{
         background:
           linear-gradient(90deg, rgba(5,7,6,.96) 0%, rgba(5,7,6,.82) 52%, rgba(5,7,6,.28) 100%),
@@ -599,14 +599,13 @@
       <div class="wrap">
         <div class="hero-copy">
           <img class="hero-seal" src="assets/favicon.svg" alt="" />
-          <h1>Yellow Lotus Consulting Group</h1>
-          <p class="hero-sub">Technology and security systems that make small teams look enterprise-grade, and help larger organizations move with cleaner evidence, stronger infrastructure, and fewer production surprises.</p>
+          <h1>Yellow Lotus</h1>
+          <p class="hero-sub">Consulting for practical AI, secure infrastructure, cloud, and web systems that fit the business.</p>
           <div class="hero-actions">
             <a class="button" href="#contact">
               Start a conversation
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
-            <a class="button secondary" href="#work">See the work</a>
           </div>
         </div>
       </div>
@@ -617,28 +616,28 @@
         <div class="split-head">
           <div>
             <p class="label">Two ways we work</p>
-            <h2>Built for the gap between business urgency and technical reality.</h2>
+            <h2>Practical systems, built cleanly.</h2>
           </div>
-          <p class="lead">Yellow Lotus is for operators who need technology to stop being fragile. The work is practical, secure by design, and sized to the organization in front of us.</p>
+          <p class="lead">Yellow Lotus helps businesses simplify the stack, secure the foundation, and ship useful systems without unnecessary overhead.</p>
         </div>
 
         <div class="tracks">
           <article class="track">
             <p class="label">Small business track</p>
             <h3>Enterprise-grade thinking without enterprise waste.</h3>
-            <p>For owners who need AI, infrastructure, apps, websites, and security to finally work together.</p>
+            <p>For owners who need AI, infrastructure, apps, websites, and security to work together.</p>
             <ul class="track-list">
               <li>
                 <span class="track-icon">AI</span>
-                <span><b>Local AI that works</b><span>Automations, copilots, and internal tools tied to real workflows.</span></span>
+                <span><b>Local AI and automation</b></span>
               </li>
               <li>
                 <span class="track-icon">IT</span>
-                <span><b>Infrastructure you can trust</b><span>Servers, backups, networks, and secure access that do not need a full-time department.</span></span>
+                <span><b>Infrastructure and secure access</b></span>
               </li>
               <li>
                 <span class="track-icon">UX</span>
-                <span><b>Applications and websites</b><span>Custom tools and premium web presences shipped cleanly, then handed over working.</span></span>
+                <span><b>Applications and websites</b></span>
               </li>
             </ul>
           </article>
@@ -646,19 +645,19 @@
           <article class="track">
             <p class="label">Enterprise track</p>
             <h3>Deep contract work where risk, audit, and uptime meet.</h3>
-            <p>For teams that need a hands-on operator across governance, cloud, DevOps, and reliability.</p>
+            <p>For teams that need hands-on support across governance, cloud, DevOps, and reliability.</p>
             <ul class="track-list">
               <li>
                 <span class="track-icon">RM</span>
-                <span><b>Governance, risk, and compliance</b><span>Control mapping, evidence packs, remediation plans, and audit automation.</span></span>
+                <span><b>Governance, risk, and compliance</b></span>
               </li>
               <li>
                 <span class="track-icon">CL</span>
-                <span><b>CloudOps and DevOps</b><span>AWS, Kubernetes, Terraform, Ansible, pipelines, deployment safety, and observability.</span></span>
+                <span><b>CloudOps and DevOps</b></span>
               </li>
               <li>
                 <span class="track-icon">RE</span>
-                <span><b>Reliability engineering</b><span>Root cause analysis and durable fixes instead of patches that reappear next quarter.</span></span>
+                <span><b>Reliability engineering</b></span>
               </li>
             </ul>
           </article>
