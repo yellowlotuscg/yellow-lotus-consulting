@@ -1,34 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Yellow Lotus">
+  <defs>
+    <linearGradient id="fav-main" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe7a3"/>
+      <stop offset="0.55" stop-color="#e0ad44"/>
+      <stop offset="1" stop-color="#a9781d"/>
+    </linearGradient>
+    <linearGradient id="fav-inner" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff5d2"/>
+      <stop offset="0.6" stop-color="#f0c75f"/>
+      <stop offset="1" stop-color="#c89328"/>
+    </linearGradient>
+  </defs>
   <rect width="512" height="512" rx="112" fill="#050706"/>
-  <g transform="translate(0 76)">
-    <defs>
-      <linearGradient id="petal" x1="144" x2="358" y1="75" y2="287" gradientUnits="userSpaceOnUse">
-        <stop stop-color="#fff1a7"/>
-        <stop offset=".34" stop-color="#f3c63f"/>
-        <stop offset=".68" stop-color="#c99524"/>
-        <stop offset="1" stop-color="#8b5d12"/>
-      </linearGradient>
-      <linearGradient id="petalLight" x1="172" x2="330" y1="75" y2="280" gradientUnits="userSpaceOnUse">
-        <stop stop-color="#fff7c7"/>
-        <stop offset=".45" stop-color="#ffd84e"/>
-        <stop offset="1" stop-color="#be8420"/>
-      </linearGradient>
-      <linearGradient id="arcGold" x1="84" x2="428" y1="36" y2="180" gradientUnits="userSpaceOnUse">
-        <stop stop-color="#b77b18"/>
-        <stop offset=".48" stop-color="#ffd84f"/>
-        <stop offset="1" stop-color="#a36d18"/>
-      </linearGradient>
-    </defs>
-    <path d="M95 154C118 56 200 22 256 22s138 34 161 132" fill="none" stroke="url(#arcGold)" stroke-width="8" stroke-linecap="round"/>
-    <path d="M256 250C222 207 226 155 256 86c30 69 34 121 0 164Z" fill="url(#petalLight)"/>
-    <path d="M240 260C173 230 136 170 147 87c62 23 101 76 106 151 0 10-4 18-13 22Z" fill="url(#petal)"/>
-    <path d="M272 260c67-30 104-90 93-173-62 23-101 76-106 151 0 10 4 18 13 22Z" fill="url(#petal)"/>
-    <path d="M211 263C151 257 97 222 70 158c71 1 126 33 166 91-4 9-12 14-25 14Z" fill="url(#petal)"/>
-    <path d="M301 263c60-6 114-41 141-105-71 1-126 33-166 91 4 9 12 14 25 14Z" fill="url(#petal)"/>
-    <path d="M184 276C128 285 77 270 34 231c57-20 109-10 158 31-1 6-4 11-8 14Z" fill="url(#petal)"/>
-    <path d="M328 276c56 9 107-6 150-45-57-20-109-10-158 31 1 6 4 11 8 14Z" fill="url(#petal)"/>
-    <path d="M256 274c-28-28-34-71 0-122 34 51 28 94 0 122Z" fill="url(#petalLight)"/>
-    <path d="M205 286c-31 10-60 11-91 3 39-20 78-29 119-24-5 10-14 17-28 21Z" fill="url(#petalLight)"/>
-    <path d="M307 286c31 10 60 11 91 3-39-20-78-29-119-24 5 10 14 17 28 21Z" fill="url(#petalLight)"/>
+  <g transform="translate(256 330) scale(0.82)">
+    <g fill="url(#fav-main)">
+      <path d="M0 0 C -36 -64 -32 -156 0 -200 C 32 -156 36 -64 0 0 Z" transform="rotate(-66)"/>
+      <path d="M0 0 C -36 -64 -32 -156 0 -200 C 32 -156 36 -64 0 0 Z" transform="rotate(66)"/>
+      <path d="M0 0 C -36 -64 -32 -156 0 -200 C 32 -156 36 -64 0 0 Z" transform="rotate(-44)"/>
+      <path d="M0 0 C -36 -64 -32 -156 0 -200 C 32 -156 36 -64 0 0 Z" transform="rotate(44)"/>
+      <path d="M0 0 C -36 -64 -32 -156 0 -200 C 32 -156 36 -64 0 0 Z" transform="rotate(-22)"/>
+      <path d="M0 0 C -36 -64 -32 -156 0 -200 C 32 -156 36 -64 0 0 Z" transform="rotate(22)"/>
+      <path d="M0 0 C -36 -64 -32 -156 0 -200 C 32 -156 36 -64 0 0 Z" transform="rotate(0)"/>
+    </g>
+    <g fill="url(#fav-inner)">
+      <path d="M0 0 C -23 -42 -20 -100 0 -128 C 20 -100 23 -42 0 0 Z" transform="rotate(-26)"/>
+      <path d="M0 0 C -23 -42 -20 -100 0 -128 C 20 -100 23 -42 0 0 Z" transform="rotate(26)"/>
+      <path d="M0 0 C -23 -42 -20 -100 0 -128 C 20 -100 23 -42 0 0 Z" transform="rotate(0)"/>
+    </g>
+    <path d="M0 10 C -13 -10 -11 -46 0 -66 C 11 -46 13 -10 0 10 Z" fill="url(#fav-inner)"/>
   </g>
 </svg>
