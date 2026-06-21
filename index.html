@@ -320,7 +320,7 @@
 
     .work-grid{
       display:grid;
-      grid-template-columns:repeat(3, minmax(0, 1fr));
+      grid-template-columns:repeat(auto-fit, minmax(248px, 1fr));
       gap:18px;
       margin-top:42px;
     }
@@ -712,6 +712,17 @@
               <h3>CloudRiskIQ</h3>
               <p>Pulls findings from cloud, endpoint, and code systems, scores them by real risk, maps them to control frameworks, and produces an audit-ready evidence pack.</p>
               <div class="tags"><span>FastAPI</span><span>Next.js</span><span>Control mapping</span><span>Risk scoring</span></div>
+              <span class="case-link">View the case study</span>
+            </div>
+          </a>
+
+          <a class="case" href="https://github.com/yellowlotuscg/home-soc-lab">
+            <div class="case-media"><img src="assets/case-study-panels.png" alt="Golden domain controller radiating hardened policy to endpoints" loading="lazy" /></div>
+            <div class="case-body">
+              <span class="case-type">Security operations</span>
+              <h3>Home SOC Lab</h3>
+              <p>Active Directory, CIS-aligned Group Policy hardening, and a free SIEM with detection as code. Centralized identity and detection that let a small team run like a much larger one.</p>
+              <div class="tags"><span>Active Directory</span><span>Group Policy</span><span>Wazuh</span><span>Sigma</span></div>
               <span class="case-link">View the case study</span>
             </div>
           </a>
