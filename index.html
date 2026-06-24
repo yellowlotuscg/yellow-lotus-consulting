@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Yellow Lotus Consulting Group | Practical AI, CRM, Cloud, and GRC Systems</title>
-  <meta name="description" content="Yellow Lotus Consulting Group builds practical AI workflow assessments, CRM and speed-to-lead automation, dashboards, cloud systems, and GRC-ready operations for small businesses and technical teams." />
+  <title>Yellow Lotus Consulting Group | AI Lead Response and CRM Automation</title>
+  <meta name="description" content="Yellow Lotus helps small service businesses stop losing leads with AI-assisted lead response, CRM cleanup, follow-up automation, secure dashboards, and practical workflow systems." />
   <meta property="og:title" content="Yellow Lotus Consulting Group" />
-  <meta property="og:description" content="AI systems that turn scattered work into booked revenue, cleaner operations, and faster decisions." />
+  <meta property="og:description" content="Stop losing leads because nobody replied fast enough. Yellow Lotus builds AI-assisted lead response and CRM systems for small service businesses." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/generated/higgsfield-ops-command-hero.png" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
@@ -17,251 +17,32 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet" />
   <style>
     :root{
-      --ink:#07100c;
-      --ink-2:#0b1711;
-      --deep:#10251b;
-      --cream:#fbf7ec;
-      --paper:#fffaf0;
-      --paper-2:#f3ead7;
-      --text:#111814;
-      --muted:#617167;
-      --soft:#87958b;
-      --line:rgba(17,24,20,.12);
-      --line-dark:rgba(255,250,240,.13);
-      --gold:#c89b39;
-      --gold-2:#efd083;
-      --jade:#2e8c67;
-      --jade-2:#90c6a4;
-      --blue:#3247d7;
+      --ink:#07100c; --cream:#fbf7ec; --paper:#fffaf0; --text:#111814; --muted:#5e6c63;
+      --line:rgba(17,24,20,.12); --line-dark:rgba(255,250,240,.14); --gold:#c89b39; --gold-2:#efd083; --jade:#2e8c67;
       --shadow:rgba(32,32,65,.18) 0 34px 70px -38px, rgba(0,0,0,.14) 0 18px 42px -26px;
-      --radius:28px;
       --sans:"Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       --display:"Source Sans 3", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       --mono:"Source Code Pro", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      color:var(--text);
-      background:var(--cream);
-      font-family:var(--sans);
-      font-size:16px;
-      line-height:1.6;
-      text-rendering:optimizeLegibility;
-    }
-    body::before{
-      content:"";
-      position:fixed;
-      inset:0;
-      pointer-events:none;
-      z-index:-1;
-      background:
-        radial-gradient(circle at 16% 8%, rgba(200,155,57,.16), transparent 28rem),
-        radial-gradient(circle at 86% 34%, rgba(46,140,103,.13), transparent 34rem),
-        linear-gradient(180deg, #fffaf0 0%, #fbf7ec 48%, #f3ead7 100%);
-    }
-    img{display:block; max-width:100%}
-    a{color:inherit; text-decoration:none}
-    p,h1,h2,h3{margin-top:0}
-    .wrap{width:min(1180px, calc(100% - 40px)); margin:0 auto}
-    .topbar{
-      position:fixed;
-      inset:0 0 auto;
-      z-index:40;
-      border-bottom:1px solid rgba(255,250,240,.14);
-      background:rgba(7,16,12,.76);
-      backdrop-filter:blur(22px) saturate(160%);
-      color:var(--cream);
-    }
-    .nav{
-      min-height:76px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:28px;
-    }
-    .brand{display:flex; align-items:center; gap:12px; min-width:0; font-weight:800; letter-spacing:-.02em}
-    .brand-mark{width:44px; height:44px; border-radius:14px; filter:drop-shadow(0 0 22px rgba(239,208,131,.28))}
-    .brand-name{display:flex; flex-direction:column; line-height:1.02; white-space:nowrap}
-    .brand-name strong{font-size:1.02rem; letter-spacing:-.03em}
-    .brand-name span{color:var(--gold-2); font-family:var(--mono); font-size:.61rem; letter-spacing:.16em; text-transform:uppercase}
-    .nav-links{display:flex; align-items:center; gap:24px; color:rgba(251,247,236,.74); font-size:.88rem; font-weight:650}
-    .nav-links a{transition:color .18s ease}
-    .nav-links a:hover{color:var(--gold-2)}
-    .button{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-height:46px;
-      padding:0 18px;
-      border:1px solid rgba(200,155,57,.42);
-      border-radius:999px;
-      background:linear-gradient(135deg, var(--gold-2), var(--gold));
-      color:#161104;
-      font-weight:800;
-      font-size:.92rem;
-      letter-spacing:-.01em;
-      box-shadow:rgba(200,155,57,.24) 0 18px 44px -20px;
-      transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-    }
-    .button:hover{transform:translateY(-2px); box-shadow:rgba(200,155,57,.32) 0 24px 52px -24px}
-    .button.secondary{background:rgba(255,250,240,.06); color:var(--cream); border-color:rgba(255,250,240,.22); box-shadow:none}
-    .button.secondary:hover{border-color:rgba(239,208,131,.72)}
-    .button.dark{background:var(--ink); color:var(--cream); border-color:var(--ink); box-shadow:rgba(7,16,12,.25) 0 18px 44px -24px}
-    .label{
-      margin:0 0 14px;
-      color:var(--jade);
-      font-family:var(--mono);
-      font-size:.72rem;
-      font-weight:700;
-      letter-spacing:.15em;
-      text-transform:uppercase;
-    }
-    .hero{
-      position:relative;
-      min-height:100svh;
-      display:flex;
-      align-items:center;
-      overflow:hidden;
-      color:var(--cream);
-      background:var(--ink);
-      isolation:isolate;
-      padding:126px 0 76px;
-    }
-    .hero::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      z-index:-1;
-      background:
-        linear-gradient(90deg, rgba(7,16,12,.98) 0%, rgba(7,16,12,.88) 36%, rgba(7,16,12,.18) 72%, rgba(7,16,12,.28) 100%),
-        linear-gradient(180deg, rgba(7,16,12,.06) 0%, rgba(7,16,12,.9) 100%);
-    }
-    .hero-art{
-      position:absolute;
-      inset:0;
-      z-index:-2;
-      background-image:url("assets/generated/higgsfield-ops-command-hero.png");
-      background-size:cover;
-      background-position:center right;
-      transform:scale(1.03);
-      filter:saturate(.9) contrast(1.05);
-    }
-    .hero-grid{display:grid; grid-template-columns:minmax(0, .9fr) minmax(340px, .58fr); gap:54px; align-items:end}
-    .hero-copy{max-width:705px}
-    h1{
-      max-width:11ch;
-      margin:0 0 24px;
-      font-family:var(--display);
-      font-size:clamp(3.25rem, 7.2vw, 6.9rem);
-      font-weight:300;
-      letter-spacing:-.075em;
-      line-height:.9;
-    }
-    .hero-sub{
-      max-width:640px;
-      margin:0 0 30px;
-      color:rgba(251,247,236,.78);
-      font-size:clamp(1.08rem, 1.7vw, 1.32rem);
-      line-height:1.55;
-    }
-    .hero-actions{display:flex; flex-wrap:wrap; gap:14px; align-items:center; margin-bottom:30px}
-    .hero-proof{display:flex; flex-wrap:wrap; gap:10px}
-    .proof-pill{border:1px solid rgba(255,250,240,.16); background:rgba(255,250,240,.06); color:rgba(251,247,236,.76); border-radius:999px; padding:8px 12px; font-size:.79rem; font-weight:650}
-    .command-card{
-      align-self:end;
-      padding:22px;
-      border:1px solid rgba(255,250,240,.14);
-      border-radius:24px;
-      background:rgba(7,16,12,.62);
-      box-shadow:rgba(0,0,0,.34) 0 30px 80px -42px;
-      backdrop-filter:blur(18px);
-    }
-    .command-card h2{margin:0 0 8px; color:var(--cream); font-size:1.04rem; letter-spacing:-.03em}
-    .command-card p{margin:0 0 18px; color:rgba(251,247,236,.66); font-size:.9rem}
-    .metric-row{display:grid; grid-template-columns:repeat(3, 1fr); gap:10px}
-    .metric{padding:14px 12px; border-radius:18px; background:rgba(255,250,240,.07); border:1px solid rgba(255,250,240,.1)}
-    .metric strong{display:block; color:var(--gold-2); font-size:1.28rem; line-height:1; letter-spacing:-.05em}
-    .metric span{display:block; margin-top:6px; color:rgba(251,247,236,.58); font-size:.68rem; font-family:var(--mono); text-transform:uppercase; letter-spacing:.08em}
-    .section{padding:104px 0}
-    .section.dark{background:var(--ink); color:var(--cream)}
-    .section.tight{padding:72px 0}
-    .section-head{display:grid; grid-template-columns:minmax(0,.9fr) minmax(280px,.58fr); gap:56px; align-items:end; margin-bottom:44px}
-    h2{
-      margin:0;
-      font-family:var(--display);
-      font-size:clamp(2.35rem, 5vw, 5rem);
-      font-weight:300;
-      letter-spacing:-.065em;
-      line-height:.95;
-    }
-    .section-head p,.lead{margin:0; color:var(--muted); font-size:1.08rem; line-height:1.72}
-    .dark .section-head p,.dark .lead{color:rgba(251,247,236,.66)}
-    .trust-strip{display:grid; grid-template-columns:repeat(4, 1fr); gap:1px; overflow:hidden; border:1px solid var(--line); border-radius:24px; background:var(--line); box-shadow:var(--shadow)}
-    .trust-item{padding:26px; background:rgba(255,250,240,.78)}
-    .trust-item strong{display:block; margin-bottom:8px; font-size:1.02rem; letter-spacing:-.03em}
-    .trust-item span{display:block; color:var(--muted); font-size:.9rem; line-height:1.5}
-    .offers{display:grid; grid-template-columns:repeat(4,1fr); gap:16px}
-    .offer{position:relative; padding:28px; min-height:315px; border:1px solid var(--line); border-radius:var(--radius); background:rgba(255,250,240,.78); box-shadow:rgba(32,32,65,.14) 0 22px 58px -38px; overflow:hidden}
-    .offer::after{content:""; position:absolute; inset:auto -30% -55% 26%; height:160px; background:radial-gradient(circle, rgba(200,155,57,.16), transparent 68%)}
-    .offer .num{font-family:var(--mono); color:var(--jade); font-size:.72rem; font-weight:700; letter-spacing:.1em}
-    .offer h3{margin:34px 0 12px; font-size:1.35rem; line-height:1.08; letter-spacing:-.04em}
-    .offer p{margin:0 0 18px; color:var(--muted); font-size:.94rem; line-height:1.58}
-    .price{display:inline-flex; padding:8px 10px; border-radius:999px; background:rgba(46,140,103,.1); color:#17563d; font-weight:800; font-size:.78rem}
-    .system-grid{display:grid; grid-template-columns:minmax(0,.86fr) minmax(360px,.8fr); gap:42px; align-items:center}
-    .system-visual{position:relative; border-radius:30px; overflow:hidden; border:1px solid var(--line-dark); background:#0b1711; box-shadow:rgba(0,0,0,.35) 0 34px 90px -42px}
-    .system-visual img{width:100%; min-height:440px; object-fit:cover; filter:saturate(.76) contrast(.96) brightness(.72)}
-    .system-visual::after{content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(7,16,12,.04), rgba(7,16,12,.72))}
-    .system-overlay{position:absolute; inset:auto 22px 22px; z-index:2; display:grid; grid-template-columns:repeat(2,1fr); gap:10px}
-    .sys-chip{padding:14px; border:1px solid rgba(255,250,240,.16); border-radius:16px; background:rgba(7,16,12,.62); backdrop-filter:blur(14px)}
-    .sys-chip strong{display:block; color:var(--gold-2); font-size:.83rem}
-    .sys-chip span{display:block; margin-top:4px; color:rgba(251,247,236,.62); font-size:.76rem}
-    .bullet-list{display:grid; gap:14px; margin-top:30px}
-    .bullet{display:grid; grid-template-columns:34px minmax(0,1fr); gap:14px; align-items:start; padding:18px; border:1px solid var(--line-dark); border-radius:20px; background:rgba(255,250,240,.05)}
-    .bullet i{display:grid; place-items:center; width:34px; height:34px; border-radius:50%; color:#0e2a1e; background:var(--gold-2); font-style:normal; font-weight:900}
-    .bullet strong{display:block; margin-bottom:3px; color:var(--cream)}
-    .bullet span{display:block; color:rgba(251,247,236,.62); font-size:.93rem}
-    .proof-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:18px}
-    .proof-card{padding:28px; border:1px solid var(--line); border-radius:var(--radius); background:rgba(255,250,240,.82); box-shadow:rgba(32,32,65,.12) 0 24px 60px -42px}
-    .proof-card .tag{display:inline-flex; margin-bottom:24px; padding:7px 10px; border-radius:999px; color:#165a40; background:rgba(46,140,103,.1); font-family:var(--mono); font-size:.7rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase}
-    .proof-card h3{margin:0 0 12px; font-size:1.55rem; letter-spacing:-.05em; line-height:1.04}
-    .proof-card p{margin:0; color:var(--muted)}
-    .process{display:grid; grid-template-columns:repeat(5,1fr); gap:12px; counter-reset:step}
-    .step{counter-increment:step; padding:24px; min-height:220px; border:1px solid var(--line-dark); border-radius:24px; background:rgba(255,250,240,.055)}
-    .step::before{content:"0" counter(step); display:block; margin-bottom:28px; color:var(--gold-2); font-family:var(--mono); font-size:.78rem; font-weight:700}
-    .step strong{display:block; margin-bottom:10px; font-size:1.04rem}
-    .step span{display:block; color:rgba(251,247,236,.62); font-size:.9rem; line-height:1.55}
-    .cta-panel{position:relative; overflow:hidden; border-radius:34px; padding:54px; color:var(--cream); background:linear-gradient(135deg, #07100c, #153323); box-shadow:rgba(7,16,12,.28) 0 30px 85px -40px}
-    .cta-panel::after{content:""; position:absolute; inset:-30% -10% auto auto; width:420px; height:420px; border-radius:50%; background:radial-gradient(circle, rgba(239,208,131,.24), transparent 68%)}
-    .cta-content{position:relative; z-index:1; display:grid; grid-template-columns:minmax(0,.92fr) minmax(270px,.44fr); gap:44px; align-items:center}
-    .cta-panel h2{color:var(--cream); max-width:760px}
-    .cta-panel p{margin:20px 0 0; color:rgba(251,247,236,.68); font-size:1.08rem}
-    .cta-actions{display:flex; flex-direction:column; gap:12px; align-items:stretch}
-    .fine-print{margin-top:18px; color:rgba(251,247,236,.52); font-size:.84rem; line-height:1.5}
-    footer{padding:40px 0; color:rgba(251,247,236,.58); background:#07100c; font-size:.9rem}
-    .footer-row{display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap}
-    @media (max-width:980px){
-      .nav-links{display:none}
-      .hero-grid,.section-head,.system-grid,.cta-content{grid-template-columns:1fr}
-      .command-card{max-width:620px}
-      .trust-strip,.offers{grid-template-columns:repeat(2,1fr)}
-      .process{grid-template-columns:repeat(2,1fr)}
-      .proof-grid{grid-template-columns:1fr}
-      .system-visual img{min-height:360px}
-    }
-    @media (max-width:640px){
-      .wrap{width:min(100% - 26px, 1180px)}
-      .topbar{position:sticky}
-      .nav{min-height:68px}
-      .brand-name strong{font-size:.92rem}
-      .hero{min-height:auto; padding:78px 0 54px}
-      h1{font-size:clamp(3rem, 16vw, 4.5rem)}
-      .trust-strip,.offers,.metric-row,.process,.system-overlay{grid-template-columns:1fr}
-      .section{padding:72px 0}
-      .offer{min-height:auto}
-      .cta-panel{padding:34px 24px}
-    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0; color:var(--text); background:var(--cream); font-family:var(--sans); font-size:16px; line-height:1.6; text-rendering:optimizeLegibility}
+    body::before{content:""; position:fixed; inset:0; pointer-events:none; z-index:-1; background:radial-gradient(circle at 16% 8%, rgba(200,155,57,.16), transparent 28rem), radial-gradient(circle at 86% 34%, rgba(46,140,103,.13), transparent 34rem), linear-gradient(180deg, #fffaf0 0%, #fbf7ec 50%, #f3ead7 100%)}
+    img{display:block; max-width:100%} a{color:inherit; text-decoration:none} p,h1,h2,h3{margin-top:0}.wrap{width:min(1160px, calc(100% - 40px)); margin:0 auto}
+    .topbar{position:fixed; inset:0 0 auto; z-index:40; border-bottom:1px solid rgba(255,250,240,.14); background:rgba(7,16,12,.76); backdrop-filter:blur(22px) saturate(160%); color:var(--cream)}
+    .nav{min-height:74px; display:flex; align-items:center; justify-content:space-between; gap:24px}.brand{display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:-.02em}.brand-mark{width:42px; height:42px; border-radius:14px; filter:drop-shadow(0 0 22px rgba(239,208,131,.28))}.brand-name{display:flex; flex-direction:column; line-height:1.02; white-space:nowrap}.brand-name strong{font-size:1.02rem}.brand-name span{color:var(--gold-2); font-family:var(--mono); font-size:.61rem; letter-spacing:.16em; text-transform:uppercase}.nav-links{display:flex; align-items:center; gap:23px; color:rgba(251,247,236,.74); font-size:.88rem; font-weight:650}.nav-links a:hover{color:var(--gold-2)}
+    .button{display:inline-flex; align-items:center; justify-content:center; min-height:46px; padding:0 18px; border:1px solid rgba(200,155,57,.42); border-radius:999px; background:linear-gradient(135deg, var(--gold-2), var(--gold)); color:#161104; font-weight:800; font-size:.92rem; box-shadow:rgba(200,155,57,.24) 0 18px 44px -20px; transition:transform .18s ease, box-shadow .18s ease}.button:hover{transform:translateY(-2px)}.button.secondary{background:rgba(255,250,240,.06); color:var(--cream); border-color:rgba(255,250,240,.22); box-shadow:none}.button.dark{background:var(--ink); color:var(--cream); border-color:var(--ink)}
+    .label{margin:0 0 14px; color:var(--jade); font-family:var(--mono); font-size:.72rem; font-weight:700; letter-spacing:.15em; text-transform:uppercase}
+    .hero{position:relative; min-height:100svh; display:flex; align-items:center; overflow:hidden; color:var(--cream); background:var(--ink); isolation:isolate; padding:126px 0 76px}.hero::before{content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(90deg, rgba(7,16,12,.98) 0%, rgba(7,16,12,.88) 38%, rgba(7,16,12,.2) 76%, rgba(7,16,12,.32) 100%), linear-gradient(180deg, rgba(7,16,12,.04), rgba(7,16,12,.9))}.hero-art{position:absolute; inset:0; z-index:-2; background-image:url("assets/generated/higgsfield-ops-command-hero.png"); background-size:cover; background-position:center right; transform:scale(1.03); filter:saturate(.9) contrast(1.05)}
+    .hero-grid{display:grid; grid-template-columns:minmax(0,.92fr) minmax(330px,.52fr); gap:52px; align-items:end}.hero-copy{max-width:740px}h1{max-width:11ch; margin:0 0 24px; font-family:var(--display); font-size:clamp(3.2rem,7.5vw,7.2rem); font-weight:300; letter-spacing:-.078em; line-height:.9}.hero-sub{max-width:650px; margin:0 0 30px; color:rgba(251,247,236,.8); font-size:clamp(1.1rem,1.8vw,1.36rem); line-height:1.52}.hero-actions{display:flex; flex-wrap:wrap; gap:14px; align-items:center; margin-bottom:30px}.hero-proof{display:flex; flex-wrap:wrap; gap:10px}.proof-pill{border:1px solid rgba(255,250,240,.16); background:rgba(255,250,240,.06); color:rgba(251,247,236,.76); border-radius:999px; padding:8px 12px; font-size:.79rem; font-weight:650}
+    .command-card{padding:22px; border:1px solid rgba(255,250,240,.14); border-radius:24px; background:rgba(7,16,12,.62); box-shadow:rgba(0,0,0,.34) 0 30px 80px -42px; backdrop-filter:blur(18px)}.command-card h2{margin:0 0 8px; color:var(--cream); font-size:1.04rem}.command-card p{margin:0 0 18px; color:rgba(251,247,236,.66); font-size:.9rem}.metric-row{display:grid; grid-template-columns:repeat(3,1fr); gap:10px}.metric{padding:14px 12px; border-radius:18px; background:rgba(255,250,240,.07); border:1px solid rgba(255,250,240,.1)}.metric strong{display:block; color:var(--gold-2); font-size:1.28rem; line-height:1}.metric span{display:block; margin-top:6px; color:rgba(251,247,236,.58); font-size:.68rem; font-family:var(--mono); text-transform:uppercase; letter-spacing:.08em}
+    .section{padding:92px 0}.section.dark{background:var(--ink); color:var(--cream)}.section.tight{padding:70px 0}.section-head{display:grid; grid-template-columns:minmax(0,.86fr) minmax(280px,.56fr); gap:52px; align-items:end; margin-bottom:38px}h2{margin:0; font-family:var(--display); font-size:clamp(2.25rem,4.8vw,4.8rem); font-weight:300; letter-spacing:-.065em; line-height:.96}.section-head p,.lead{margin:0; color:var(--muted); font-size:1.06rem; line-height:1.7}.dark .section-head p,.dark .lead{color:rgba(251,247,236,.66)}
+    .problem-grid,.deliverables,.proof-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}.card{padding:26px; border:1px solid var(--line); border-radius:26px; background:rgba(255,250,240,.82); box-shadow:rgba(32,32,65,.12) 0 24px 60px -42px}.card strong{display:block; margin-bottom:10px; font-size:1.12rem; letter-spacing:-.03em}.card p{margin:0; color:var(--muted); font-size:.96rem; line-height:1.55}.card .tag{display:inline-flex; margin-bottom:20px; padding:7px 10px; border-radius:999px; color:#165a40; background:rgba(46,140,103,.1); font-family:var(--mono); font-size:.7rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase}
+    .offer-panel{display:grid; grid-template-columns:minmax(0,.74fr) minmax(320px,.55fr); gap:34px; align-items:stretch}.price-box{padding:32px; border-radius:28px; color:var(--cream); background:linear-gradient(135deg,#07100c,#163625); box-shadow:var(--shadow)}.price-box h3{margin:0 0 12px; font-size:1.7rem; letter-spacing:-.05em}.price{font-size:2.7rem; font-weight:800; letter-spacing:-.07em; color:var(--gold-2); line-height:1}.price-box p{color:rgba(251,247,236,.66); margin:12px 0 22px}.checklist{display:grid; gap:12px; margin:0; padding:0; list-style:none}.checklist li{display:grid; grid-template-columns:28px 1fr; gap:10px; align-items:start; color:rgba(251,247,236,.76); font-size:.94rem}.checklist li::before{content:"✓"; display:grid; place-items:center; width:24px; height:24px; border-radius:50%; color:#092017; background:var(--gold-2); font-weight:900}
+    .system-grid{display:grid; grid-template-columns:minmax(0,.78fr) minmax(360px,.8fr); gap:42px; align-items:center}.system-visual{position:relative; border-radius:30px; overflow:hidden; border:1px solid var(--line-dark); background:#0b1711; box-shadow:rgba(0,0,0,.35) 0 34px 90px -42px}.system-visual img{width:100%; min-height:410px; object-fit:cover; filter:saturate(.76) contrast(.96) brightness(.72)}.system-visual::after{content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(7,16,12,.04), rgba(7,16,12,.72))}.system-overlay{position:absolute; inset:auto 22px 22px; z-index:2; display:grid; grid-template-columns:repeat(2,1fr); gap:10px}.sys-chip{padding:14px; border:1px solid rgba(255,250,240,.16); border-radius:16px; background:rgba(7,16,12,.62); backdrop-filter:blur(14px)}.sys-chip strong{display:block; color:var(--gold-2); font-size:.83rem}.sys-chip span{display:block; margin-top:4px; color:rgba(251,247,236,.62); font-size:.76rem}
+    .steps{display:grid; grid-template-columns:repeat(4,1fr); gap:12px; counter-reset:step}.step{counter-increment:step; padding:24px; min-height:190px; border:1px solid var(--line-dark); border-radius:24px; background:rgba(255,250,240,.055)}.step::before{content:"0" counter(step); display:block; margin-bottom:24px; color:var(--gold-2); font-family:var(--mono); font-size:.78rem; font-weight:700}.step strong{display:block; margin-bottom:10px}.step span{display:block; color:rgba(251,247,236,.62); font-size:.9rem; line-height:1.55}
+    .cta-panel{position:relative; overflow:hidden; border-radius:34px; padding:50px; color:var(--cream); background:linear-gradient(135deg,#07100c,#153323); box-shadow:rgba(7,16,12,.28) 0 30px 85px -40px}.cta-panel::after{content:""; position:absolute; inset:-30% -10% auto auto; width:420px; height:420px; border-radius:50%; background:radial-gradient(circle, rgba(239,208,131,.24), transparent 68%)}.cta-content{position:relative; z-index:1; display:grid; grid-template-columns:minmax(0,.9fr) minmax(270px,.44fr); gap:40px; align-items:center}.cta-panel h2{color:var(--cream)}.cta-panel p{margin:18px 0 0; color:rgba(251,247,236,.68); font-size:1.07rem}.cta-actions{display:flex; flex-direction:column; gap:12px}.fine-print{margin-top:16px; color:rgba(251,247,236,.52); font-size:.84rem; line-height:1.5}
+    footer{padding:38px 0; color:rgba(251,247,236,.58); background:#07100c; font-size:.9rem}.footer-row{display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap}
+    @media (max-width:980px){.nav-links{display:none}.hero-grid,.section-head,.offer-panel,.system-grid,.cta-content{grid-template-columns:1fr}.problem-grid,.deliverables,.proof-grid{grid-template-columns:1fr}.steps{grid-template-columns:repeat(2,1fr)}.command-card{max-width:620px}.system-visual img{min-height:360px}}
+    @media (max-width:640px){.wrap{width:min(100% - 26px,1160px)}.topbar{position:sticky}.nav{min-height:68px}.hero{min-height:auto; padding:78px 0 54px}h1{font-size:clamp(3rem,16vw,4.5rem)}.metric-row,.steps,.system-overlay{grid-template-columns:1fr}.section{padding:68px 0}.cta-panel{padding:34px 24px}}
   </style>
 </head>
 <body>
@@ -272,12 +53,9 @@
         <span class="brand-name"><strong>Yellow Lotus</strong><span>Consulting Group</span></span>
       </a>
       <nav class="nav-links" aria-label="Primary links">
-        <a href="#offers">Offers</a>
-        <a href="#system">Operating system</a>
-        <a href="#proof">Proof</a>
-        <a href="#process">Process</a>
+        <a href="#problem">Problem</a><a href="#offer">Offer</a><a href="#system">What we build</a><a href="#process">Process</a>
       </nav>
-      <a class="button secondary" href="mailto:yellowlotuscg@gmail.com?subject=AI%20Workflow%20Assessment">Request assessment</a>
+      <a class="button secondary" href="mailto:yellowlotuscg@gmail.com?subject=Lead%20Response%20Audit">Book a lead audit</a>
     </div>
   </header>
 
@@ -286,165 +64,94 @@
       <div class="hero-art" aria-hidden="true"></div>
       <div class="wrap hero-grid">
         <div class="hero-copy">
-          <p class="label">Practical AI, CRM, Cloud, and GRC</p>
-          <h1 id="hero-title">AI systems that make the work move.</h1>
-          <p class="hero-sub">Yellow Lotus builds the operating layer small businesses need: faster lead response, cleaner follow-up, useful dashboards, secure cloud workflows, and automation that stays under human control.</p>
+          <p class="label">AI lead response and CRM automation</p>
+          <h1 id="hero-title">Stop losing leads because nobody replied fast enough.</h1>
+          <p class="hero-sub">Yellow Lotus helps service businesses capture every inquiry, follow up faster, organize the CRM, and see what needs attention from one secure dashboard.</p>
           <div class="hero-actions">
-            <a class="button" href="mailto:yellowlotuscg@gmail.com?subject=AI%20Workflow%20Assessment">Request an AI workflow assessment</a>
-            <a class="button secondary" href="#offers">See the offer ladder</a>
+            <a class="button" href="mailto:yellowlotuscg@gmail.com?subject=Lead%20Response%20Audit&body=I%20want%20to%20book%20a%20lead%20response%20audit.%0A%0ABusiness%20type:%0ACurrent%20lead%20sources:%0ACurrent%20CRM%20or%20spreadsheet:%0ABiggest%20follow-up%20problem:">Book a lead response audit</a>
+            <a class="button secondary" href="#offer">See what we build</a>
           </div>
-          <div class="hero-proof" aria-label="Core service areas">
-            <span class="proof-pill">Speed-to-lead systems</span>
-            <span class="proof-pill">Owner dashboards</span>
-            <span class="proof-pill">Cloud and DevOps</span>
-            <span class="proof-pill">GRC-ready workflows</span>
+          <div class="hero-proof" aria-label="Core outcomes">
+            <span class="proof-pill">Missed-lead review</span><span class="proof-pill">CRM cleanup</span><span class="proof-pill">Follow-up reminders</span><span class="proof-pill">Owner dashboard</span>
           </div>
         </div>
-        <aside class="command-card" aria-label="Operating targets">
-          <h2>Built around measurable movement</h2>
-          <p>The work is scoped around outcomes a business owner can see, approve, and measure.</p>
-          <div class="metric-row">
-            <div class="metric"><strong>30d</strong><span>Pilot plan</span></div>
-            <div class="metric"><strong>3</strong><span>Top workflows</span></div>
-            <div class="metric"><strong>1</strong><span>Owner dashboard</span></div>
-          </div>
+        <aside class="command-card" aria-label="Audit deliverables">
+          <h2>Your first step is simple</h2>
+          <p>We find where leads are leaking and show the first automation worth building.</p>
+          <div class="metric-row"><div class="metric"><strong>3</strong><span>Leaks found</span></div><div class="metric"><strong>30d</strong><span>Build plan</span></div><div class="metric"><strong>1</strong><span>Clear next step</span></div></div>
         </aside>
       </div>
     </section>
 
-    <section class="section tight" aria-label="Service trust strip">
-      <div class="wrap trust-strip">
-        <div class="trust-item"><strong>AI workflow assessment</strong><span>Find the bottlenecks worth automating first, and the ones that should stay human-reviewed.</span></div>
-        <div class="trust-item"><strong>CRM and speed-to-lead</strong><span>Capture new opportunities, route them clearly, and follow up before the deal goes cold.</span></div>
-        <div class="trust-item"><strong>Dashboards and tools</strong><span>Turn scattered spreadsheets, messages, and tasks into owner-grade operating views.</span></div>
-        <div class="trust-item"><strong>Cloud, GRC, DevOps</strong><span>Build secure, explainable systems that can survive audits, growth, and handoff.</span></div>
-      </div>
-    </section>
-
-    <section class="section" id="offers">
+    <section class="section" id="problem">
       <div class="wrap">
-        <div class="section-head">
-          <div>
-            <p class="label">Offer ladder</p>
-            <h2>Start with the work that can pay for the next system.</h2>
-          </div>
-          <p>Instead of selling vague AI transformation, Yellow Lotus packages the work into clear steps: diagnose, roadmap, build, and support. Each step creates a usable artifact and a decision point.</p>
-        </div>
-        <div class="offers">
-          <article class="offer">
-            <span class="num">01</span>
-            <h3>AI workflow diagnostic</h3>
-            <p>Inventory the workflows, score the automation opportunities, flag risk, and choose the first useful pilot.</p>
-            <span class="price">$750 to $1,500</span>
-          </article>
-          <article class="offer">
-            <span class="num">02</span>
-            <h3>Implementation roadmap</h3>
-            <p>Turn the diagnostic into a 30-day build plan with tools, data flow, owners, review points, and success measures.</p>
-            <span class="price">$1,500 to $2,500</span>
-          </article>
-          <article class="offer">
-            <span class="num">03</span>
-            <h3>Done-with-you build</h3>
-            <p>Build CRM automations, intake forms, dashboards, AI-assisted workflows, cloud glue, and internal tools.</p>
-            <span class="price">$3,500 to $12,000</span>
-          </article>
-          <article class="offer">
-            <span class="num">04</span>
-            <h3>Operating support</h3>
-            <p>Keep the system useful with monitoring, fixes, training, documentation, and careful expansion.</p>
-            <span class="price">$500 to $2,500/mo</span>
-          </article>
+        <div class="section-head"><div><p class="label">The problem we solve</p><h2>Most businesses do not need more apps. They need follow-up that actually happens.</h2></div><p>Leads come from websites, calls, email, referrals, social media, and spreadsheets. Then they get lost because nobody owns the next step.</p></div>
+        <div class="problem-grid">
+          <article class="card"><strong>Slow replies</strong><p>New inquiries sit too long, and the best prospects book with someone else.</p></article>
+          <article class="card"><strong>Scattered tracking</strong><p>Notes live in inboxes, phones, spreadsheets, calendars, and memory.</p></article>
+          <article class="card"><strong>No clear dashboard</strong><p>The owner cannot quickly see who needs a quote, call, reminder, or decision.</p></article>
         </div>
       </div>
     </section>
 
-    <section class="section dark" id="system">
-      <div class="wrap system-grid">
+    <section class="section tight" id="offer">
+      <div class="wrap offer-panel">
         <div>
-          <p class="label">The operating system</p>
-          <h2>Less AI theater. More business plumbing.</h2>
-          <p class="lead">The goal is not to bolt a chatbot onto a messy process. The goal is to build the layer that catches work, routes it, explains it, and helps the owner make faster decisions.</p>
-          <div class="bullet-list">
-            <div class="bullet"><i>1</i><div><strong>Capture</strong><span>Forms, email, phone leads, docs, tasks, and field updates enter one clean workflow.</span></div></div>
-            <div class="bullet"><i>2</i><div><strong>Route</strong><span>Automation assigns, drafts, reminds, and escalates while approval gates stay intact.</span></div></div>
-            <div class="bullet"><i>3</i><div><strong>Measure</strong><span>Dashboards show pipeline, blocked work, margin risk, response speed, and next actions.</span></div></div>
-          </div>
+          <p class="label">Best first offer</p>
+          <h2>Speed-to-Lead + CRM Setup Sprint</h2>
+          <p class="lead">We connect your lead sources, clean up the follow-up process, create simple CRM stages, add owner-approved response templates, and build a secure dashboard so nothing important disappears.</p>
         </div>
-        <figure class="system-visual">
-          <img src="assets/generated/higgsfield-operating-system-panel.png" alt="Atmospheric view of a business automation operating system with connected workflow panels" />
-          <figcaption class="system-overlay" aria-label="Operating system capabilities">
-            <span class="sys-chip"><strong>Lead intake</strong><span>Capture and qualify</span></span>
-            <span class="sys-chip"><strong>CRM follow-up</strong><span>Draft and remind</span></span>
-            <span class="sys-chip"><strong>Owner dashboard</strong><span>Decide faster</span></span>
-            <span class="sys-chip"><strong>Secure cloud</strong><span>Keep control</span></span>
-          </figcaption>
-        </figure>
+        <aside class="price-box">
+          <h3>Start with an audit</h3>
+          <div class="price">$750+</div>
+          <p>The audit gives you the map. The sprint turns it into a working system.</p>
+          <ul class="checklist">
+            <li>Lead source review</li><li>CRM and spreadsheet cleanup plan</li><li>Top 3 automation opportunities</li><li>30-day build recommendation</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="system">
+      <div class="wrap">
+        <div class="section-head"><div><p class="label">What we build</p><h2>A practical system around your leads.</h2></div><p>Simple enough for the team to use. Strong enough for the owner to trust.</p></div>
+        <div class="deliverables">
+          <article class="card"><span class="tag">Capture</span><strong>Forms, inboxes, calls, and referrals</strong><p>New leads get logged and routed instead of sitting in random places.</p></article>
+          <article class="card"><span class="tag">Follow up</span><strong>Templates and reminders</strong><p>AI can draft and organize, but customer-facing messages stay approved by people.</p></article>
+          <article class="card"><span class="tag">Decide</span><strong>Secure dashboard</strong><p>See open leads, stale follow-ups, quote status, and next actions in one place.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark">
+      <div class="wrap system-grid">
+        <div><p class="label">Behind the scenes</p><h2>We bring the technical tools, but you get a plain business result.</h2><p class="lead">AI, automation, cloud, security, and dashboards are the engine. The offer is simpler: respond faster, follow up better, and know what is happening.</p></div>
+        <figure class="system-visual"><img src="assets/generated/higgsfield-operating-system-panel.png" alt="Atmospheric view of a secure business automation dashboard" /><figcaption class="system-overlay" aria-label="System parts"><span class="sys-chip"><strong>Lead intake</strong><span>Capture and qualify</span></span><span class="sys-chip"><strong>CRM follow-up</strong><span>Draft and remind</span></span><span class="sys-chip"><strong>Secure dashboard</strong><span>See next actions</span></span><span class="sys-chip"><strong>Cloud and GRC</strong><span>Keep control</span></span></figcaption></figure>
       </div>
     </section>
 
     <section class="section" id="proof">
       <div class="wrap">
-        <div class="section-head">
-          <div>
-            <p class="label">Productized proof</p>
-            <h2>Real systems, not just slide decks.</h2>
-          </div>
-          <p>The consulting work is backed by working local-first systems and vertical MVPs. Each one becomes proof, reusable process, and a faster path to the next client build.</p>
-        </div>
+        <div class="section-head"><div><p class="label">Why Yellow Lotus</p><h2>Business automation with real technical depth.</h2></div><p>You get practical consulting backed by working systems, not just strategy calls.</p></div>
         <div class="proof-grid">
-          <article class="proof-card"><span class="tag">Field operations</span><h3>Pro Tracker / Revamp</h3><p>Field-service operations, owner control, project links, agreements, invoice drafts, and telemetry for real contractor workflows.</p></article>
-          <article class="proof-card"><span class="tag">Profit forecasting</span><h3>Landscape Profit Scheduler</h3><p>Scheduling intelligence that shows how labor changes affect contract profitability, margin risk, and deferred production reserves.</p></article>
-          <article class="proof-card"><span class="tag">Private command center</span><h3>Alfred Dashboard</h3><p>A local-first operating cockpit with workstreams, approval gates, worker roles, device controls, Signal routing, and daily company loops.</p></article>
-          <article class="proof-card"><span class="tag">Security and cloud</span><h3>CloudRiskIQ and GRC systems</h3><p>Cloud, DevOps, security, and audit-ready workflow experience for teams that need practical controls without slowing down delivery.</p></article>
+          <article class="card"><span class="tag">Operations</span><strong>Field-service workflows</strong><p>Project tracking, document workflows, billing support, and owner visibility for contractor-style businesses.</p></article>
+          <article class="card"><span class="tag">Profit</span><strong>Scheduling and margin tools</strong><p>Forecast how schedule decisions affect labor, service delivery, and gross margin.</p></article>
+          <article class="card"><span class="tag">Security</span><strong>Cloud, DevOps, and GRC</strong><p>Secure systems, role-based access, deployment support, and audit-ready workflow thinking.</p></article>
         </div>
       </div>
     </section>
 
     <section class="section dark" id="process">
       <div class="wrap">
-        <div class="section-head">
-          <div>
-            <p class="label">How work moves</p>
-            <h2>A simple path from messy work to operating clarity.</h2>
-          </div>
-          <p>No black box, no surprise automation. Every project moves through visible stages with owner approval before sensitive or external actions.</p>
-        </div>
-        <div class="process">
-          <div class="step"><strong>Diagnose</strong><span>Map workflows, tools, pain points, sensitive data, and revenue leaks.</span></div>
-          <div class="step"><strong>Prioritize</strong><span>Rank use cases by value, risk, speed, cost, and owner visibility.</span></div>
-          <div class="step"><strong>Build</strong><span>Create the smallest useful system with tests, docs, and rollback thinking.</span></div>
-          <div class="step"><strong>Train</strong><span>Show the team how to use it, when to trust it, and when to review it.</span></div>
-          <div class="step"><strong>Measure</strong><span>Track response time, saved effort, pipeline movement, margin, and blockers.</span></div>
-        </div>
+        <div class="section-head"><div><p class="label">How it works</p><h2>Audit, build, test, improve.</h2></div><p>Every step is visible. External messages, account changes, payments, and launches stay approval-gated.</p></div>
+        <div class="steps"><div class="step"><strong>Audit</strong><span>Map lead sources, follow-up steps, tools, and bottlenecks.</span></div><div class="step"><strong>Design</strong><span>Pick the smallest system that creates a real business win.</span></div><div class="step"><strong>Build</strong><span>Connect the tools, templates, dashboard, and reminders.</span></div><div class="step"><strong>Monitor</strong><span>Review missed leads, stale follow-ups, and next upgrades.</span></div></div>
       </div>
     </section>
 
     <section class="section" id="contact">
-      <div class="wrap">
-        <div class="cta-panel">
-          <div class="cta-content">
-            <div>
-              <p class="label">First profitable step</p>
-              <h2>Start with an AI workflow assessment.</h2>
-              <p>Bring the messy process, the half-working tools, the missed follow-ups, and the wish list. Yellow Lotus will turn that into a scored automation plan and a practical first build.</p>
-            </div>
-            <div class="cta-actions">
-              <a class="button" href="mailto:yellowlotuscg@gmail.com?subject=AI%20Workflow%20Assessment&body=I%20want%20to%20request%20an%20AI%20workflow%20assessment.%0A%0ABusiness%20type:%0ACurrent%20tools:%0ABiggest%20bottleneck:%0AWhat%20I%20want%20to%20improve:">Email Yellow Lotus</a>
-              <a class="button secondary" href="https://github.com/yellowlotuscg" rel="noopener">View technical work</a>
-              <p class="fine-print">External sends, account changes, production launches, and money-impacting actions stay approval-gated.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="wrap"><div class="cta-panel"><div class="cta-content"><div><p class="label">Ready when you are</p><h2>Book a lead response audit.</h2><p>Send the messy process. We will turn it into a clear map, a scored automation plan, and the first build recommendation.</p></div><div class="cta-actions"><a class="button" href="mailto:yellowlotuscg@gmail.com?subject=Lead%20Response%20Audit&body=I%20want%20to%20book%20a%20lead%20response%20audit.%0A%0ABusiness%20type:%0ACurrent%20lead%20sources:%0ACurrent%20CRM%20or%20spreadsheet:%0ABiggest%20follow-up%20problem:">Email Yellow Lotus</a><p class="fine-print">No customer-facing automation goes live without approved wording and owner sign-off.</p></div></div></div></div>
     </section>
   </main>
-
-  <footer>
-    <div class="wrap footer-row">
-      <span>© 2026 Yellow Lotus Consulting Group, LLC</span>
-      <span>Practical AI, cloud, DevOps, GRC, and owner-grade automation.</span>
-    </div>
-  </footer>
+  <footer><div class="wrap footer-row"><span>© 2026 Yellow Lotus Consulting Group, LLC</span><span>AI lead response, CRM automation, secure dashboards, cloud, and GRC.</span></div></footer>
 </body>
 </html>

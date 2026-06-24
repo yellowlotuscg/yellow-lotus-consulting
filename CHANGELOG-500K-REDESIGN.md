@@ -4,23 +4,29 @@ Date: 2026-06-24
 
 ## Goal
 
-Reposition Yellow Lotus Consulting Group as a premium, practical AI consulting firm capable of supporting a $500k/year revenue target.
+Make the public Yellow Lotus Consulting Group website clear, premium, and tied to revenue instead of listing every internal capability.
+
+## Final public positioning
+
+Primary offer:
+
+**Speed-to-Lead + CRM Setup Sprint**
+
+Plain-language promise:
+
+**Stop losing leads because nobody replied fast enough.**
+
+Yellow Lotus helps service businesses capture every inquiry, follow up faster, organize the CRM, and see what needs attention from one secure dashboard.
 
 ## What changed
 
-- Rebuilt the static landing page in `index.html`.
-- Shifted the site from repeated lotus/cyber symbolism to practical business outcomes.
-- Added a clearer hero message: AI systems that make the work move.
-- Added primary conversion path: request an AI workflow assessment.
-- Added offer ladder with pricing bands:
-  - AI workflow diagnostic: $750 to $1,500
-  - Implementation roadmap: $1,500 to $2,500
-  - Done-with-you build: $3,500 to $12,000
-  - Operating support: $500 to $2,500/month
-- Added service trust strip for assessment, CRM/speed-to-lead, dashboards/tools, and cloud/GRC/DevOps.
-- Added operating-system section focused on capture, route, and measure.
-- Added productized proof cards for Pro Tracker, Landscape Profit Scheduler, Alfred Dashboard, and CloudRiskIQ/GRC.
-- Added visible approval-gate language.
+- Removed the private/internal `Alfred Dashboard` reference.
+- Replaced it with `secure dashboard`.
+- Removed public-facing internal tool names from proof cards.
+- Cut the page down to one clear offer instead of a broad capability list.
+- Made the primary CTA `Book a lead response audit`.
+- Focused the page on missed leads, slow follow-up, scattered tracking, CRM cleanup, reminders, and owner visibility.
+- Kept cloud, DevOps, and GRC as supporting trust points instead of the main pitch.
 
 ## Higgsfield assets generated
 
@@ -29,19 +35,21 @@ Reposition Yellow Lotus Consulting Group as a premium, practical AI consulting f
 
 Credits used: 2 Higgsfield credits.
 
-## QA notes
-
-The generated images are visually premium but include small fake UI text artifacts. The redesign uses them with overlays and real HTML labels so the artifacts are not relied on for meaning.
-
-Validation completed:
+## QA checks
 
 - Local HTTP preview returned 200.
 - New image assets served successfully.
 - No missing local asset references.
 - No em dashes in the HTML copy.
-- CTA mailto path present.
-- Headless screenshot captured for hero and full page.
+- No visible `Alfred` mentions.
+- `secure dashboard` present.
+- `lead response` positioning present.
+- CTA present.
+- Visible text count: about 1,085 words.
+- Full-page screenshot captured: `/tmp/yellow-lotus-clear-offer-full.png`.
 
 ## Deployment status
 
-Not deployed yet. The live domain `yellowlotuscg.com` is currently served by Vercel. Cloudflare Pages only listed `arkham-bjj` under this Cloudflare account. Public deployment/push remains approval-gated.
+Approved by owner on Signal: "Cool let's get it live".
+
+Live host detected: Vercel, not Cloudflare Pages. Cloudflare account currently only lists `arkham-bjj` as a Pages project. Deploy with Vercel unless the hosting stack is intentionally migrated later.
