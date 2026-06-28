@@ -27,4 +27,5 @@ vercel --prod
 - CloudRiskIQ: https://github.com/yellowlotuscg/cloudriskiq
 - Self-healing Kubernetes pipeline: https://github.com/yellowlotuscg/self-healing-k8s-pipeline
 - Algorithms with reasoning: https://github.com/yellowlotuscg/leetcode-reasoning
-- Web work: https://revampdesign.co and https://arkhambjj.com
+- Web work: https://revampdesign.co, https://arkhambjj.com, and `/aomt-atlanta/`
+- AOMT Atlanta static concept: `aomt-atlanta/index.html` with assets, CSS, and JS tracked in this repo
