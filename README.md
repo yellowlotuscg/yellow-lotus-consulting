@@ -1,31 +1,48 @@
 # Yellow Lotus Consulting Group
 
-The site for Yellow Lotus Consulting Group, LLC. Technology and security, built
-to fit your business. Local AI and IT for small businesses, and GRC, cloud, and
-DevOps work for larger organizations.
+Static public website for Yellow Lotus Consulting Group.
 
-It is a single static `index.html`, no build step and no dependencies, so it
-deploys to Vercel as is.
+## Current public positioning
 
-## Run it locally
+Primary offer: premium websites and redesigns for small businesses and operators.
+
+Service ladder:
+
+1. Website build or redesign.
+2. Site control, maintenance, or clean handoff.
+3. Local SEO structure and service pages.
+4. Lead-generation forms, alerts, and reporting.
+5. Practical applications, dashboards, and infrastructure when the website starts producing demand.
+
+The homepage should stay concise: let people know we make websites and build useful systems without explaining the full private Alfred stack.
+
+## Run locally
 
 ```bash
-python3 -m http.server 4466
-# open http://localhost:4466
+python3 -m http.server 4188
+# open http://127.0.0.1:4188/
 ```
 
 ## Deploy
 
-Deployed on Vercel. Any push to `main` ships. To deploy from the command line:
+Deployed on Vercel. Any push to `main` ships.
 
 ```bash
 vercel --prod
 ```
 
-## What it links to
+Do not deploy public changes without owner approval.
 
-- CloudRiskIQ: https://github.com/yellowlotuscg/cloudriskiq
-- Self-healing Kubernetes pipeline: https://github.com/yellowlotuscg/self-healing-k8s-pipeline
-- Algorithms with reasoning: https://github.com/yellowlotuscg/leetcode-reasoning
-- Web work: https://revampdesign.co, https://arkhambjj.com, and `/aomt-atlanta/`
-- AOMT Atlanta static concept: `aomt-atlanta/index.html` with assets, CSS, and JS tracked in this repo
+## Visual assets
+
+Public optimized hero:
+
+```text
+assets/generated/yellow-lotus-websites-hero.jpg
+```
+
+Raw Higgsfield generation and source metadata are kept off the public static repo:
+
+```text
+/Volumes/INVICTUS/YellowLotusAssets/2026-06-29-website-redesign/
+```
