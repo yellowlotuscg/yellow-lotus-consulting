@@ -14,7 +14,7 @@ Service ladder:
 4. Lead-generation forms, alerts, and reporting.
 5. Practical applications, dashboards, and infrastructure when the website starts producing demand.
 
-The homepage should stay concise: let people know we make websites and build useful systems without explaining the full private Alfred stack.
+The homepage should stay concise and premium: lead with strategic websites that improve trust, search visibility, and lead capture without explaining the full private Alfred stack.
 
 ## Run locally
 
